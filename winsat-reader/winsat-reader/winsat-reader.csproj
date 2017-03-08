@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsBorderPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="clsSysInfo.cs" />
     <Compile Include="frmBase.cs">
       <SubType>Form</SubType>
@@ -133,6 +136,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hdd60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\winsat-reader_ico.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
