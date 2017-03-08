@@ -37,5 +37,29 @@ namespace winsat_reader
             fID.setDt(dt);
             fID.Show();
         }
+
+        private void valueReset()
+        {
+            lblOSInfo.Text = "";
+            lblMachine.Text = "";
+        }
+
+        // toolStrip 終了
+        private void tsExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        // toolStrip 評価実行
+        private void tsRunEvaluation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // toolStrip 評価読み込み
+        private void tsLoadEvaluation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

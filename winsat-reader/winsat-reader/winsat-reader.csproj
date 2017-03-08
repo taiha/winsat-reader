@@ -61,6 +61,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="resImg.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resImg.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +81,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="resImg.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>resImg.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,6 +97,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\display.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mem40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\display40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mem60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\display60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hdd60.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
