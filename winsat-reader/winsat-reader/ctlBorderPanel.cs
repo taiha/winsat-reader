@@ -12,11 +12,11 @@ using System.Drawing;
 
 namespace winsat_reader
 {
-    class clsBorderPanel : Panel
+    class ctlBorderPanel : Panel
     {
         private Color ColorBorder = Color.Transparent;
 
-        public clsBorderPanel()
+        public ctlBorderPanel()
         {
             this.SetStyle(ControlStyles.UserPaint, true);
         }

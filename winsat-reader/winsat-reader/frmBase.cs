@@ -18,6 +18,7 @@ namespace winsat_reader
 
         // Class
         clsSysInfo clsSI;
+        clsDataFormat clsDF = new clsDataFormat();
 
         // Variable
         
@@ -30,27 +31,18 @@ namespace winsat_reader
 
         private void frmBase_Load(object sender, EventArgs e)
         {
-            fID = new frmInfoData();
             clsSI = new clsSysInfo();
 
-            DataTable dt = new DataTable();
-            dt = clsSI.getInfoDt("Win32_OperatingSystem");
-
-            fID.setDt(dt);
-            //fID.Show();
-
+            valueReset();
             barCheck();
         }
 
         private void barCheck()
         {
             int width = 0;
-            clsBorderPanel cpuBar = new clsBorderPanel();
+            ctlBorderPanel cpuBar = new ctlBorderPanel();
 
-            /* Column Width: 45%
-             * width = tableLayoutPanel.width * (Column.width * 0.01) * Score / Max.Score)
-             */
-            width = Convert.ToInt32(tblSysScore.Width * (tblSysScore.ColumnStyles[2].Width * 0.01) * (2.2 / 9.9));
+            width = clsDF.getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, 1.1);
 
             cpuBar.BorderColor = Color.Salmon;
             cpuBar.BackColor = Color.White;
@@ -58,35 +50,18 @@ namespace winsat_reader
             cpuBar.Dock = DockStyle.Left;
             cpuBar.Margin = new Padding(0, 15, 0, 15);
             tblSysScore.Controls.Add(cpuBar, 2, 0);
-
-            clsBorderPanel memBar = new clsBorderPanel();
-
-            width = Convert.ToInt32(tblSysScore.Width * (tblSysScore.ColumnStyles[2].Width * 0.01) * (9.9 / 9.9));
-
-            memBar.BorderColor = Color.SandyBrown;
-            memBar.BackColor = Color.White;
-            memBar.Width = width;
-            memBar.Dock = DockStyle.Left;
-            memBar.Margin = new Padding(0, 15, 0, 15);
-            tblSysScore.Controls.Add(memBar, 2, 1);
-
-            clsBorderPanel gfxBar = new clsBorderPanel();
-
-            width = Convert.ToInt32(tblSysScore.Width * (tblSysScore.ColumnStyles[2].Width * 0.01) * (8.4 / 9.9));
-            
-            gfxBar.BorderColor = Color.YellowGreen;
-            gfxBar.BackColor = Color.White;
-            gfxBar.Width = width;
-            gfxBar.Dock = DockStyle.Left;
-            gfxBar.Margin = new Padding(0, 15, 0, 15);
-            tblSysScore.Controls.Add(gfxBar, 2, 2);
-
         }
 
         private void valueReset()
         {
             lblOSInfo.Text = "";
-            lblMachine.Text = "";
+            lblMachineInfo.Text = "";
+
+            lblCpuInfo.Text = "CPU\r\n";
+            lblMemInfo.Text = "メモリ (RAM)\r\n";
+            lblGfxInfo.Text = "グラフィックス\r\n";
+            lblGameInfo.Text = "ゲーム用 グラフィックス\r\n";
+            lblDiskInfo.Text = "プライマリ ディスク\r\n";
         }
 
         // toolStrip 終了

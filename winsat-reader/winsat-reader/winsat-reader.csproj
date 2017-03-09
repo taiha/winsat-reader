@@ -46,9 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsBorderPanel.cs">
+    <Compile Include="clsSysCheck.cs" />
+    <Compile Include="ctlBorderPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="clsDataFormat.cs" />
     <Compile Include="clsSysInfo.cs" />
     <Compile Include="frmBase.cs">
       <SubType>Form</SubType>

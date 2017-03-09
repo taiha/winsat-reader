@@ -266,10 +266,11 @@
             this.lblCpuInfo.Location = new System.Drawing.Point(0, 2);
             this.lblCpuInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblCpuInfo.Name = "lblCpuInfo";
+            this.lblCpuInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.lblCpuInfo.Size = new System.Drawing.Size(350, 61);
             this.lblCpuInfo.TabIndex = 0;
             this.lblCpuInfo.Text = "CPU";
-            this.lblCpuInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCpuInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblMemInfo
             // 
@@ -282,10 +283,11 @@
             this.lblMemInfo.Location = new System.Drawing.Point(0, 67);
             this.lblMemInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblMemInfo.Name = "lblMemInfo";
+            this.lblMemInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.lblMemInfo.Size = new System.Drawing.Size(350, 61);
             this.lblMemInfo.TabIndex = 1;
             this.lblMemInfo.Text = "メモリ (RAM)";
-            this.lblMemInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMemInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblGfxInfo
             // 
@@ -298,10 +300,11 @@
             this.lblGfxInfo.Location = new System.Drawing.Point(0, 132);
             this.lblGfxInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblGfxInfo.Name = "lblGfxInfo";
+            this.lblGfxInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.lblGfxInfo.Size = new System.Drawing.Size(350, 61);
             this.lblGfxInfo.TabIndex = 2;
             this.lblGfxInfo.Text = "グラフィックス";
-            this.lblGfxInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblGfxInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblGameInfo
             // 
@@ -312,10 +315,11 @@
             this.lblGameInfo.Location = new System.Drawing.Point(0, 197);
             this.lblGameInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblGameInfo.Name = "lblGameInfo";
+            this.lblGameInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.lblGameInfo.Size = new System.Drawing.Size(350, 61);
             this.lblGameInfo.TabIndex = 3;
             this.lblGameInfo.Text = "ゲーム用 グラフィックス";
-            this.lblGameInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblGameInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblDiskInfo
             // 
@@ -328,10 +332,11 @@
             this.lblDiskInfo.Location = new System.Drawing.Point(0, 262);
             this.lblDiskInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblDiskInfo.Name = "lblDiskInfo";
+            this.lblDiskInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.lblDiskInfo.Size = new System.Drawing.Size(350, 61);
             this.lblDiskInfo.TabIndex = 4;
             this.lblDiskInfo.Text = "プライマリ ディスク";
-            this.lblDiskInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDiskInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblTotal
             // 
@@ -345,7 +350,7 @@
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(350, 83);
             this.lblTotal.TabIndex = 5;
-            this.lblTotal.Text = "Total";
+            this.lblTotal.Text = "総合";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCpuDetail

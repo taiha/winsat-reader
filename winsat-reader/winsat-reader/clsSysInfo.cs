@@ -98,9 +98,9 @@ namespace winsat_reader
         }
 
         // システムメモリ総量return（double）
-        public double getMemCap(int dataType)
+        public long getMemCap()
         {
-            double cap = 0;
+            long cap = 0;
 
             getSysInfo("Win32_PhysicalMemory");
             DataRow[] memRows;
@@ -108,19 +108,7 @@ namespace winsat_reader
             memRows = infoDt.Select("NAME = 'Capacity'");
             for (int i = 0; i < memRows.Count(); i++)
             {
-                cap += Convert.ToDouble(memRows[i][1]);
-            }
-
-            switch (dataType)
-            {
-                case 1:     //GiB
-                    cap = cap / (1024 * 1024 * 1024);
-                    break;
-                case 2:     //GB
-                    cap = cap / (1000 * 1000 * 1000);
-                    break;
-                default:
-                    break;
+                cap += Convert.ToInt64(memRows[i][1]);
             }
             return cap;
         }
