@@ -51,9 +51,9 @@
             this.lblDiskInfo = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnCpuDetail = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnMemDetail = new System.Windows.Forms.Button();
+            this.btnGfxDetail = new System.Windows.Forms.Button();
+            this.btnHddDetail = new System.Windows.Forms.Button();
             this.tblTotal = new System.Windows.Forms.TableLayoutPanel();
             this.pnlTotal5 = new System.Windows.Forms.Panel();
             this.lblTotal5 = new System.Windows.Forms.Label();
@@ -122,14 +122,14 @@
             // tsRunEvaluation
             // 
             this.tsRunEvaluation.Name = "tsRunEvaluation";
-            this.tsRunEvaluation.Size = new System.Drawing.Size(152, 22);
+            this.tsRunEvaluation.Size = new System.Drawing.Size(140, 22);
             this.tsRunEvaluation.Text = "評価実行 (&R)";
             this.tsRunEvaluation.Click += new System.EventHandler(this.tsRunEvaluation_Click);
             // 
             // tsLoadEvaluation
             // 
             this.tsLoadEvaluation.Name = "tsLoadEvaluation";
-            this.tsLoadEvaluation.Size = new System.Drawing.Size(152, 22);
+            this.tsLoadEvaluation.Size = new System.Drawing.Size(140, 22);
             this.tsLoadEvaluation.Text = "評価読込 (&L)";
             this.tsLoadEvaluation.Click += new System.EventHandler(this.tsLoadEvaluation_Click);
             // 
@@ -252,19 +252,19 @@
             // tblSysScore
             // 
             this.tblSysScore.ColumnCount = 3;
-            this.tblSysScore.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tblSysScore.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tblSysScore.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tblSysScore.Controls.Add(this.lblCpuInfo, 0, 0);
-            this.tblSysScore.Controls.Add(this.lblMemInfo, 0, 1);
-            this.tblSysScore.Controls.Add(this.lblGfxInfo, 0, 2);
-            this.tblSysScore.Controls.Add(this.lblGameInfo, 0, 3);
-            this.tblSysScore.Controls.Add(this.lblDiskInfo, 0, 4);
-            this.tblSysScore.Controls.Add(this.lblTotal, 0, 5);
-            this.tblSysScore.Controls.Add(this.btnCpuDetail, 1, 0);
-            this.tblSysScore.Controls.Add(this.button2, 1, 1);
-            this.tblSysScore.Controls.Add(this.button3, 1, 2);
-            this.tblSysScore.Controls.Add(this.button4, 1, 4);
+            this.tblSysScore.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tblSysScore.Controls.Add(this.lblCpuInfo, 1, 0);
+            this.tblSysScore.Controls.Add(this.lblMemInfo, 1, 1);
+            this.tblSysScore.Controls.Add(this.lblGfxInfo, 1, 2);
+            this.tblSysScore.Controls.Add(this.lblGameInfo, 1, 3);
+            this.tblSysScore.Controls.Add(this.lblDiskInfo, 1, 4);
+            this.tblSysScore.Controls.Add(this.lblTotal, 1, 5);
+            this.tblSysScore.Controls.Add(this.btnCpuDetail, 0, 0);
+            this.tblSysScore.Controls.Add(this.btnMemDetail, 0, 1);
+            this.tblSysScore.Controls.Add(this.btnGfxDetail, 0, 2);
+            this.tblSysScore.Controls.Add(this.btnHddDetail, 0, 4);
             this.tblSysScore.Controls.Add(this.tblTotal, 2, 5);
             this.tblSysScore.Controls.Add(this.pnlCpuScore, 2, 0);
             this.tblSysScore.Controls.Add(this.pnlMemScore, 2, 1);
@@ -291,7 +291,7 @@
             this.lblCpuInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCpuInfo.Font = new System.Drawing.Font("メイリオ", 10F);
             this.lblCpuInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCpuInfo.Location = new System.Drawing.Point(0, 2);
+            this.lblCpuInfo.Location = new System.Drawing.Point(77, 2);
             this.lblCpuInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblCpuInfo.Name = "lblCpuInfo";
             this.lblCpuInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -307,7 +307,7 @@
             this.lblMemInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMemInfo.Font = new System.Drawing.Font("メイリオ", 10F);
             this.lblMemInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblMemInfo.Location = new System.Drawing.Point(0, 67);
+            this.lblMemInfo.Location = new System.Drawing.Point(77, 67);
             this.lblMemInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblMemInfo.Name = "lblMemInfo";
             this.lblMemInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -323,7 +323,7 @@
             this.lblGfxInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGfxInfo.Font = new System.Drawing.Font("メイリオ", 10F);
             this.lblGfxInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblGfxInfo.Location = new System.Drawing.Point(0, 132);
+            this.lblGfxInfo.Location = new System.Drawing.Point(77, 132);
             this.lblGfxInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblGfxInfo.Name = "lblGfxInfo";
             this.lblGfxInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -338,7 +338,7 @@
             this.lblGameInfo.BackColor = System.Drawing.Color.White;
             this.lblGameInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGameInfo.Font = new System.Drawing.Font("メイリオ", 10F);
-            this.lblGameInfo.Location = new System.Drawing.Point(0, 197);
+            this.lblGameInfo.Location = new System.Drawing.Point(77, 197);
             this.lblGameInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblGameInfo.Name = "lblGameInfo";
             this.lblGameInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -354,7 +354,7 @@
             this.lblDiskInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDiskInfo.Font = new System.Drawing.Font("メイリオ", 10F);
             this.lblDiskInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDiskInfo.Location = new System.Drawing.Point(0, 262);
+            this.lblDiskInfo.Location = new System.Drawing.Point(77, 262);
             this.lblDiskInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblDiskInfo.Name = "lblDiskInfo";
             this.lblDiskInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -370,7 +370,7 @@
             this.lblTotal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTotal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblTotal.Font = new System.Drawing.Font("メイリオ", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblTotal.Location = new System.Drawing.Point(0, 327);
+            this.lblTotal.Location = new System.Drawing.Point(77, 327);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(350, 83);
@@ -382,45 +382,45 @@
             // 
             this.btnCpuDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCpuDetail.Image = global::winsat_reader.resImg.cpu60;
-            this.btnCpuDetail.Location = new System.Drawing.Point(353, 3);
+            this.btnCpuDetail.Location = new System.Drawing.Point(3, 3);
             this.btnCpuDetail.Name = "btnCpuDetail";
             this.btnCpuDetail.Size = new System.Drawing.Size(71, 59);
             this.btnCpuDetail.TabIndex = 6;
             this.btnCpuDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCpuDetail.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnMemDetail
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Image = global::winsat_reader.resImg.mem60;
-            this.button2.Location = new System.Drawing.Point(353, 68);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 59);
-            this.button2.TabIndex = 7;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMemDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMemDetail.Image = global::winsat_reader.resImg.mem60;
+            this.btnMemDetail.Location = new System.Drawing.Point(3, 68);
+            this.btnMemDetail.Name = "btnMemDetail";
+            this.btnMemDetail.Size = new System.Drawing.Size(71, 59);
+            this.btnMemDetail.TabIndex = 7;
+            this.btnMemDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMemDetail.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnGfxDetail
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Image = global::winsat_reader.resImg.display60;
-            this.button3.Location = new System.Drawing.Point(353, 133);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 59);
-            this.button3.TabIndex = 8;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnGfxDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGfxDetail.Image = global::winsat_reader.resImg.display60;
+            this.btnGfxDetail.Location = new System.Drawing.Point(3, 133);
+            this.btnGfxDetail.Name = "btnGfxDetail";
+            this.btnGfxDetail.Size = new System.Drawing.Size(71, 59);
+            this.btnGfxDetail.TabIndex = 8;
+            this.btnGfxDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGfxDetail.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnHddDetail
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Image = global::winsat_reader.resImg.hdd40;
-            this.button4.Location = new System.Drawing.Point(353, 263);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(71, 59);
-            this.button4.TabIndex = 9;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnHddDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHddDetail.Image = global::winsat_reader.resImg.hdd40;
+            this.btnHddDetail.Location = new System.Drawing.Point(3, 263);
+            this.btnHddDetail.Name = "btnHddDetail";
+            this.btnHddDetail.Size = new System.Drawing.Size(71, 59);
+            this.btnHddDetail.TabIndex = 9;
+            this.btnHddDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHddDetail.UseVisualStyleBackColor = true;
             // 
             // tblTotal
             // 
@@ -678,9 +678,9 @@
         private System.Windows.Forms.Label lblDiskInfo;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnCpuDetail;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnMemDetail;
+        private System.Windows.Forms.Button btnGfxDetail;
+        private System.Windows.Forms.Button btnHddDetail;
         private System.Windows.Forms.TableLayoutPanel tblTotal;
         private System.Windows.Forms.Panel pnlTotal5;
         private System.Windows.Forms.Label lblTotal5;
