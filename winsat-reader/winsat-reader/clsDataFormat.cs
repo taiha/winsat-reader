@@ -18,11 +18,11 @@ namespace winsat_reader
 
             if (dataType == 0)
             {
-                valStr = conv0_00(convXB(byteCap)) + " " + unitStr;
+                valStr = conv0_00(convXB(byteCap)) + "" + unitStr;
             }
             else
             {
-                valStr = conv0_00(convXiB(byteCap)) + " " + unitStr;
+                valStr = conv0_00(convXiB(byteCap)) + "" + unitStr;
             }
 
             return valStr;

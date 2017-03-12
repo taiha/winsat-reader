@@ -54,11 +54,19 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.tblTotal = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlTotal5 = new System.Windows.Forms.Panel();
+            this.pnlTotal4 = new System.Windows.Forms.Panel();
+            this.lblTotal5 = new System.Windows.Forms.Label();
+            this.lblTotal4 = new System.Windows.Forms.Label();
             this.tsMain.SuspendLayout();
             this.gbSysSummery.SuspendLayout();
             this.tblSysSummery.SuspendLayout();
             this.gbSysScore.SuspendLayout();
             this.tblSysScore.SuspendLayout();
+            this.tblTotal.SuspendLayout();
+            this.pnlTotal5.SuspendLayout();
+            this.pnlTotal4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tsMain
@@ -193,7 +201,7 @@
             this.lblOSInfo.Location = new System.Drawing.Point(273, 1);
             this.lblOSInfo.Margin = new System.Windows.Forms.Padding(1);
             this.lblOSInfo.Name = "lblOSInfo";
-            this.lblOSInfo.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.lblOSInfo.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblOSInfo.Size = new System.Drawing.Size(504, 36);
             this.lblOSInfo.TabIndex = 2;
             this.lblOSInfo.Text = "OS_Info";
@@ -207,7 +215,7 @@
             this.lblMachineInfo.Location = new System.Drawing.Point(273, 39);
             this.lblMachineInfo.Margin = new System.Windows.Forms.Padding(1);
             this.lblMachineInfo.Name = "lblMachineInfo";
-            this.lblMachineInfo.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.lblMachineInfo.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblMachineInfo.Size = new System.Drawing.Size(504, 36);
             this.lblMachineInfo.TabIndex = 3;
             this.lblMachineInfo.Text = "Machine_Info";
@@ -242,6 +250,7 @@
             this.tblSysScore.Controls.Add(this.button2, 1, 1);
             this.tblSysScore.Controls.Add(this.button3, 1, 2);
             this.tblSysScore.Controls.Add(this.button4, 1, 4);
+            this.tblSysScore.Controls.Add(this.tblTotal, 2, 5);
             this.tblSysScore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblSysScore.Location = new System.Drawing.Point(3, 21);
             this.tblSysScore.Name = "tblSysScore";
@@ -260,8 +269,7 @@
             this.lblCpuInfo.AutoSize = true;
             this.lblCpuInfo.BackColor = System.Drawing.Color.White;
             this.lblCpuInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCpuInfo.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblCpuInfo.Image = global::winsat_reader.resImg.cpu60;
+            this.lblCpuInfo.Font = new System.Drawing.Font("メイリオ", 10F);
             this.lblCpuInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblCpuInfo.Location = new System.Drawing.Point(0, 2);
             this.lblCpuInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -270,15 +278,14 @@
             this.lblCpuInfo.Size = new System.Drawing.Size(350, 61);
             this.lblCpuInfo.TabIndex = 0;
             this.lblCpuInfo.Text = "CPU";
-            this.lblCpuInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblCpuInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblMemInfo
             // 
             this.lblMemInfo.AutoSize = true;
             this.lblMemInfo.BackColor = System.Drawing.Color.White;
             this.lblMemInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMemInfo.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblMemInfo.Image = global::winsat_reader.resImg.mem60;
+            this.lblMemInfo.Font = new System.Drawing.Font("メイリオ", 10F);
             this.lblMemInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblMemInfo.Location = new System.Drawing.Point(0, 67);
             this.lblMemInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -287,15 +294,14 @@
             this.lblMemInfo.Size = new System.Drawing.Size(350, 61);
             this.lblMemInfo.TabIndex = 1;
             this.lblMemInfo.Text = "メモリ (RAM)";
-            this.lblMemInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblMemInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGfxInfo
             // 
             this.lblGfxInfo.AutoSize = true;
             this.lblGfxInfo.BackColor = System.Drawing.Color.White;
             this.lblGfxInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGfxInfo.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblGfxInfo.Image = global::winsat_reader.resImg.display60;
+            this.lblGfxInfo.Font = new System.Drawing.Font("メイリオ", 10F);
             this.lblGfxInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblGfxInfo.Location = new System.Drawing.Point(0, 132);
             this.lblGfxInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -304,14 +310,14 @@
             this.lblGfxInfo.Size = new System.Drawing.Size(350, 61);
             this.lblGfxInfo.TabIndex = 2;
             this.lblGfxInfo.Text = "グラフィックス";
-            this.lblGfxInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblGfxInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGameInfo
             // 
             this.lblGameInfo.AutoSize = true;
             this.lblGameInfo.BackColor = System.Drawing.Color.White;
             this.lblGameInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGameInfo.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblGameInfo.Font = new System.Drawing.Font("メイリオ", 10F);
             this.lblGameInfo.Location = new System.Drawing.Point(0, 197);
             this.lblGameInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.lblGameInfo.Name = "lblGameInfo";
@@ -319,15 +325,14 @@
             this.lblGameInfo.Size = new System.Drawing.Size(350, 61);
             this.lblGameInfo.TabIndex = 3;
             this.lblGameInfo.Text = "ゲーム用 グラフィックス";
-            this.lblGameInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblGameInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDiskInfo
             // 
             this.lblDiskInfo.AutoSize = true;
             this.lblDiskInfo.BackColor = System.Drawing.Color.White;
             this.lblDiskInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDiskInfo.Font = new System.Drawing.Font("メイリオ", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblDiskInfo.Image = global::winsat_reader.resImg.hdd60;
+            this.lblDiskInfo.Font = new System.Drawing.Font("メイリオ", 10F);
             this.lblDiskInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblDiskInfo.Location = new System.Drawing.Point(0, 262);
             this.lblDiskInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
@@ -336,7 +341,7 @@
             this.lblDiskInfo.Size = new System.Drawing.Size(350, 61);
             this.lblDiskInfo.TabIndex = 4;
             this.lblDiskInfo.Text = "プライマリ ディスク";
-            this.lblDiskInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblDiskInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTotal
             // 
@@ -356,46 +361,110 @@
             // btnCpuDetail
             // 
             this.btnCpuDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCpuDetail.Image = global::winsat_reader.resImg.cpu60;
             this.btnCpuDetail.Location = new System.Drawing.Point(353, 3);
             this.btnCpuDetail.Name = "btnCpuDetail";
             this.btnCpuDetail.Size = new System.Drawing.Size(71, 59);
             this.btnCpuDetail.TabIndex = 6;
-            this.btnCpuDetail.Text = "詳細情報";
             this.btnCpuDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCpuDetail.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Image = global::winsat_reader.resImg.mem60;
             this.button2.Location = new System.Drawing.Point(353, 68);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(71, 59);
             this.button2.TabIndex = 7;
-            this.button2.Text = "詳細情報";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Image = global::winsat_reader.resImg.display60;
             this.button3.Location = new System.Drawing.Point(353, 133);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(71, 59);
             this.button3.TabIndex = 8;
-            this.button3.Text = "詳細情報";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.Image = global::winsat_reader.resImg.hdd40;
             this.button4.Location = new System.Drawing.Point(353, 263);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(71, 59);
             this.button4.TabIndex = 9;
-            this.button4.Text = "詳細情報";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
+            // 
+            // tblTotal
+            // 
+            this.tblTotal.ColumnCount = 1;
+            this.tblTotal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblTotal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblTotal.Controls.Add(this.pnlTotal5, 0, 0);
+            this.tblTotal.Controls.Add(this.pnlTotal4, 0, 1);
+            this.tblTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblTotal.Location = new System.Drawing.Point(427, 325);
+            this.tblTotal.Margin = new System.Windows.Forms.Padding(0);
+            this.tblTotal.Name = "tblTotal";
+            this.tblTotal.RowCount = 2;
+            this.tblTotal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblTotal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblTotal.Size = new System.Drawing.Size(351, 87);
+            this.tblTotal.TabIndex = 10;
+            // 
+            // pnlTotal5
+            // 
+            this.pnlTotal5.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.pnlTotal5.Controls.Add(this.lblTotal5);
+            this.pnlTotal5.Location = new System.Drawing.Point(0, 5);
+            this.pnlTotal5.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.pnlTotal5.Name = "pnlTotal5";
+            this.pnlTotal5.Size = new System.Drawing.Size(200, 33);
+            this.pnlTotal5.TabIndex = 0;
+            // 
+            // pnlTotal4
+            // 
+            this.pnlTotal4.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.pnlTotal4.Controls.Add(this.lblTotal4);
+            this.pnlTotal4.Location = new System.Drawing.Point(0, 48);
+            this.pnlTotal4.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.pnlTotal4.Name = "pnlTotal4";
+            this.pnlTotal4.Size = new System.Drawing.Size(200, 34);
+            this.pnlTotal4.TabIndex = 1;
+            // 
+            // lblTotal5
+            // 
+            this.lblTotal5.AutoSize = true;
+            this.lblTotal5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblTotal5.Font = new System.Drawing.Font("メイリオ", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTotal5.ForeColor = System.Drawing.Color.White;
+            this.lblTotal5.Location = new System.Drawing.Point(147, 0);
+            this.lblTotal5.Margin = new System.Windows.Forms.Padding(0);
+            this.lblTotal5.Name = "lblTotal5";
+            this.lblTotal5.Size = new System.Drawing.Size(53, 33);
+            this.lblTotal5.TabIndex = 0;
+            this.lblTotal5.Text = "8.8";
+            this.lblTotal5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblTotal4
+            // 
+            this.lblTotal4.AutoSize = true;
+            this.lblTotal4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblTotal4.Font = new System.Drawing.Font("メイリオ", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTotal4.ForeColor = System.Drawing.Color.White;
+            this.lblTotal4.Location = new System.Drawing.Point(147, 0);
+            this.lblTotal4.Margin = new System.Windows.Forms.Padding(0);
+            this.lblTotal4.Name = "lblTotal4";
+            this.lblTotal4.Size = new System.Drawing.Size(53, 33);
+            this.lblTotal4.TabIndex = 0;
+            this.lblTotal4.Text = "6.6";
             // 
             // frmBase
             // 
@@ -419,6 +488,11 @@
             this.gbSysScore.ResumeLayout(false);
             this.tblSysScore.ResumeLayout(false);
             this.tblSysScore.PerformLayout();
+            this.tblTotal.ResumeLayout(false);
+            this.pnlTotal5.ResumeLayout(false);
+            this.pnlTotal5.PerformLayout();
+            this.pnlTotal4.ResumeLayout(false);
+            this.pnlTotal4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,6 +525,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TableLayoutPanel tblTotal;
+        private System.Windows.Forms.Panel pnlTotal5;
+        private System.Windows.Forms.Label lblTotal5;
+        private System.Windows.Forms.Panel pnlTotal4;
+        private System.Windows.Forms.Label lblTotal4;
     }
 }
 
