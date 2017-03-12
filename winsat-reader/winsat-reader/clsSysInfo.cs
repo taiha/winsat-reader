@@ -133,7 +133,6 @@ namespace winsat_reader
         public int getSysDiskIndex()
         {
             int diskIndex = 0;
-            bool bootableFlg = false;
 
             getSysInfo("Win32_DiskPartition");
             foreach (ManagementObject mo in moc)
