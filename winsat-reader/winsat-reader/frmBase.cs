@@ -15,6 +15,7 @@ namespace winsat_reader
     {
         // Form
         frmInfoData fID;
+        frmVersion fV;
 
         // Class
         clsSysCheck clsSC;
@@ -33,7 +34,9 @@ namespace winsat_reader
         private void frmBase_Load(object sender, EventArgs e)
         {
             clsSI = new clsSysInfo();
+            fV = new frmVersion();
 
+            this.Text += " " + fV.AssemblyVersion;
             valueReset();
             //barCheck();
             setSysInfo();
@@ -196,6 +199,13 @@ namespace winsat_reader
         private void tsLoadEvaluation_Click(object sender, EventArgs e)
         {
             setScoreData();
+        }
+
+        // toolStrip バージョン情報
+        private void tsVersion_Click(object sender, EventArgs e)
+        {
+            fV = new frmVersion();
+            fV.ShowDialog();
         }
     }
 }

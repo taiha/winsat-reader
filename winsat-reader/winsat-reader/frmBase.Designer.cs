@@ -617,6 +617,7 @@
             this.tsVersion.Name = "tsVersion";
             this.tsVersion.Size = new System.Drawing.Size(160, 22);
             this.tsVersion.Text = "バージョン情報 (&V)";
+            this.tsVersion.Click += new System.EventHandler(this.tsVersion_Click);
             // 
             // frmBase
             // 
