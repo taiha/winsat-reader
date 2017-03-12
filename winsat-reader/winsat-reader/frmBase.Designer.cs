@@ -59,6 +59,16 @@
             this.pnlTotal4 = new System.Windows.Forms.Panel();
             this.lblTotal5 = new System.Windows.Forms.Label();
             this.lblTotal4 = new System.Windows.Forms.Label();
+            this.pnlCpuScore = new System.Windows.Forms.Panel();
+            this.pnlMemScore = new System.Windows.Forms.Panel();
+            this.pnlGfxScore = new System.Windows.Forms.Panel();
+            this.pnlGameScore = new System.Windows.Forms.Panel();
+            this.pnlDiskScore = new System.Windows.Forms.Panel();
+            this.lblCpuScore = new System.Windows.Forms.Label();
+            this.lblMemScore = new System.Windows.Forms.Label();
+            this.lblGfxScore = new System.Windows.Forms.Label();
+            this.lblGameScore = new System.Windows.Forms.Label();
+            this.lblDiskScore = new System.Windows.Forms.Label();
             this.tsMain.SuspendLayout();
             this.gbSysSummery.SuspendLayout();
             this.tblSysSummery.SuspendLayout();
@@ -67,6 +77,11 @@
             this.tblTotal.SuspendLayout();
             this.pnlTotal5.SuspendLayout();
             this.pnlTotal4.SuspendLayout();
+            this.pnlCpuScore.SuspendLayout();
+            this.pnlMemScore.SuspendLayout();
+            this.pnlGfxScore.SuspendLayout();
+            this.pnlGameScore.SuspendLayout();
+            this.pnlDiskScore.SuspendLayout();
             this.SuspendLayout();
             // 
             // tsMain
@@ -251,6 +266,11 @@
             this.tblSysScore.Controls.Add(this.button3, 1, 2);
             this.tblSysScore.Controls.Add(this.button4, 1, 4);
             this.tblSysScore.Controls.Add(this.tblTotal, 2, 5);
+            this.tblSysScore.Controls.Add(this.pnlCpuScore, 2, 0);
+            this.tblSysScore.Controls.Add(this.pnlMemScore, 2, 1);
+            this.tblSysScore.Controls.Add(this.pnlGfxScore, 2, 2);
+            this.tblSysScore.Controls.Add(this.pnlGameScore, 2, 3);
+            this.tblSysScore.Controls.Add(this.pnlDiskScore, 2, 4);
             this.tblSysScore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblSysScore.Location = new System.Drawing.Point(3, 21);
             this.tblSysScore.Name = "tblSysScore";
@@ -466,6 +486,131 @@
             this.lblTotal4.TabIndex = 0;
             this.lblTotal4.Text = "6.6";
             // 
+            // pnlCpuScore
+            // 
+            this.pnlCpuScore.BackColor = System.Drawing.Color.Salmon;
+            this.pnlCpuScore.Controls.Add(this.lblCpuScore);
+            this.pnlCpuScore.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlCpuScore.Location = new System.Drawing.Point(427, 15);
+            this.pnlCpuScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.pnlCpuScore.Name = "pnlCpuScore";
+            this.pnlCpuScore.Size = new System.Drawing.Size(200, 35);
+            this.pnlCpuScore.TabIndex = 11;
+            // 
+            // pnlMemScore
+            // 
+            this.pnlMemScore.BackColor = System.Drawing.Color.SandyBrown;
+            this.pnlMemScore.Controls.Add(this.lblMemScore);
+            this.pnlMemScore.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMemScore.Location = new System.Drawing.Point(427, 80);
+            this.pnlMemScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.pnlMemScore.Name = "pnlMemScore";
+            this.pnlMemScore.Size = new System.Drawing.Size(200, 35);
+            this.pnlMemScore.TabIndex = 12;
+            // 
+            // pnlGfxScore
+            // 
+            this.pnlGfxScore.BackColor = System.Drawing.Color.YellowGreen;
+            this.pnlGfxScore.Controls.Add(this.lblGfxScore);
+            this.pnlGfxScore.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlGfxScore.Location = new System.Drawing.Point(427, 145);
+            this.pnlGfxScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.pnlGfxScore.Name = "pnlGfxScore";
+            this.pnlGfxScore.Size = new System.Drawing.Size(200, 35);
+            this.pnlGfxScore.TabIndex = 13;
+            // 
+            // pnlGameScore
+            // 
+            this.pnlGameScore.BackColor = System.Drawing.Color.SkyBlue;
+            this.pnlGameScore.Controls.Add(this.lblGameScore);
+            this.pnlGameScore.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlGameScore.Location = new System.Drawing.Point(427, 210);
+            this.pnlGameScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.pnlGameScore.Name = "pnlGameScore";
+            this.pnlGameScore.Size = new System.Drawing.Size(200, 35);
+            this.pnlGameScore.TabIndex = 14;
+            // 
+            // pnlDiskScore
+            // 
+            this.pnlDiskScore.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.pnlDiskScore.Controls.Add(this.lblDiskScore);
+            this.pnlDiskScore.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlDiskScore.Location = new System.Drawing.Point(427, 275);
+            this.pnlDiskScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
+            this.pnlDiskScore.Name = "pnlDiskScore";
+            this.pnlDiskScore.Size = new System.Drawing.Size(200, 35);
+            this.pnlDiskScore.TabIndex = 15;
+            // 
+            // lblCpuScore
+            // 
+            this.lblCpuScore.AutoSize = true;
+            this.lblCpuScore.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblCpuScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
+            this.lblCpuScore.ForeColor = System.Drawing.Color.White;
+            this.lblCpuScore.Location = new System.Drawing.Point(145, 0);
+            this.lblCpuScore.Margin = new System.Windows.Forms.Padding(0);
+            this.lblCpuScore.Name = "lblCpuScore";
+            this.lblCpuScore.Size = new System.Drawing.Size(55, 36);
+            this.lblCpuScore.TabIndex = 0;
+            this.lblCpuScore.Text = "4.4";
+            this.lblCpuScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblMemScore
+            // 
+            this.lblMemScore.AutoSize = true;
+            this.lblMemScore.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblMemScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
+            this.lblMemScore.ForeColor = System.Drawing.Color.White;
+            this.lblMemScore.Location = new System.Drawing.Point(145, 0);
+            this.lblMemScore.Margin = new System.Windows.Forms.Padding(0);
+            this.lblMemScore.Name = "lblMemScore";
+            this.lblMemScore.Size = new System.Drawing.Size(55, 36);
+            this.lblMemScore.TabIndex = 0;
+            this.lblMemScore.Text = "4.4";
+            this.lblMemScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblGfxScore
+            // 
+            this.lblGfxScore.AutoSize = true;
+            this.lblGfxScore.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblGfxScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
+            this.lblGfxScore.ForeColor = System.Drawing.Color.White;
+            this.lblGfxScore.Location = new System.Drawing.Point(145, 0);
+            this.lblGfxScore.Margin = new System.Windows.Forms.Padding(0);
+            this.lblGfxScore.Name = "lblGfxScore";
+            this.lblGfxScore.Size = new System.Drawing.Size(55, 36);
+            this.lblGfxScore.TabIndex = 0;
+            this.lblGfxScore.Text = "4.4";
+            this.lblGfxScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblGameScore
+            // 
+            this.lblGameScore.AutoSize = true;
+            this.lblGameScore.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblGameScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
+            this.lblGameScore.ForeColor = System.Drawing.Color.White;
+            this.lblGameScore.Location = new System.Drawing.Point(145, 0);
+            this.lblGameScore.Margin = new System.Windows.Forms.Padding(0);
+            this.lblGameScore.Name = "lblGameScore";
+            this.lblGameScore.Size = new System.Drawing.Size(55, 36);
+            this.lblGameScore.TabIndex = 0;
+            this.lblGameScore.Text = "4.4";
+            this.lblGameScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblDiskScore
+            // 
+            this.lblDiskScore.AutoSize = true;
+            this.lblDiskScore.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblDiskScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
+            this.lblDiskScore.ForeColor = System.Drawing.Color.White;
+            this.lblDiskScore.Location = new System.Drawing.Point(145, 0);
+            this.lblDiskScore.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDiskScore.Name = "lblDiskScore";
+            this.lblDiskScore.Size = new System.Drawing.Size(55, 36);
+            this.lblDiskScore.TabIndex = 0;
+            this.lblDiskScore.Text = "4.4";
+            this.lblDiskScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -493,6 +638,16 @@
             this.pnlTotal5.PerformLayout();
             this.pnlTotal4.ResumeLayout(false);
             this.pnlTotal4.PerformLayout();
+            this.pnlCpuScore.ResumeLayout(false);
+            this.pnlCpuScore.PerformLayout();
+            this.pnlMemScore.ResumeLayout(false);
+            this.pnlMemScore.PerformLayout();
+            this.pnlGfxScore.ResumeLayout(false);
+            this.pnlGfxScore.PerformLayout();
+            this.pnlGameScore.ResumeLayout(false);
+            this.pnlGameScore.PerformLayout();
+            this.pnlDiskScore.ResumeLayout(false);
+            this.pnlDiskScore.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,6 +685,16 @@
         private System.Windows.Forms.Label lblTotal5;
         private System.Windows.Forms.Panel pnlTotal4;
         private System.Windows.Forms.Label lblTotal4;
+        private System.Windows.Forms.Panel pnlCpuScore;
+        private System.Windows.Forms.Label lblCpuScore;
+        private System.Windows.Forms.Panel pnlMemScore;
+        private System.Windows.Forms.Label lblMemScore;
+        private System.Windows.Forms.Panel pnlGfxScore;
+        private System.Windows.Forms.Label lblGfxScore;
+        private System.Windows.Forms.Panel pnlGameScore;
+        private System.Windows.Forms.Label lblGameScore;
+        private System.Windows.Forms.Panel pnlDiskScore;
+        private System.Windows.Forms.Label lblDiskScore;
     }
 }
 

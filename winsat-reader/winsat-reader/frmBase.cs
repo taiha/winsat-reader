@@ -37,7 +37,7 @@ namespace winsat_reader
             valueReset();
             //barCheck();
             setSysInfo();
-            setScoreData();
+            //setScoreData();
         }
 
         // 枠線付きPanel
@@ -66,6 +66,21 @@ namespace winsat_reader
             lblGfxInfo.Text = "グラフィックス\r\n";
             lblGameInfo.Text = "ゲーム用 グラフィックス\r\n";
             lblDiskInfo.Text = "プライマリ ディスク\r\n";
+
+            pnlCpuScore.Width = 1;
+            lblCpuScore.Text = "0.0";
+            pnlMemScore.Width = 1;
+            lblMemScore.Text = "0.0";
+            pnlGfxScore.Width = 1;
+            lblGfxScore.Text = "0.0";
+            pnlGameScore.Width = 1;
+            lblGameScore.Text = "0.0";
+            pnlDiskScore.Width = 1;
+            lblDiskScore.Text = "0.0";
+            pnlTotal5.Width = 1;
+            lblTotal5.Text = "0.0";
+            pnlTotal4.Width = 1;
+            lblTotal4.Text = "0.0";
         }
 
         private void setSysInfo()
@@ -118,116 +133,39 @@ namespace winsat_reader
             int width = 0;
 
             // CPU
-            Panel cpuBar = new Panel();
             double cpuScore = clsSI.getSysValueDouble("Win32_WinSAT", "CPUScore");
             width = clsDF.getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, cpuScore);
 
-            //cpuBar.BorderColor = Color.Salmon;
-            cpuBar.BackColor = Color.Salmon;
-            cpuBar.Width = width;
-            cpuBar.Dock = DockStyle.Left;
-            cpuBar.Margin = new Padding(0, 15, 0, 15);
-            tblSysScore.Controls.Add(cpuBar, 2, 0);
-
-            Label cpuLbl = new Label();
-            cpuLbl.Dock = DockStyle.Right;
-            cpuLbl.Width = 70;
-            cpuLbl.Margin = new Padding(0);
-            cpuLbl.TextAlign = ContentAlignment.MiddleRight;
-            cpuLbl.Text = clsDF.conv0_0(cpuScore);
-            //cpuLbl.ForeColor = Color.FromArgb(55, 55, 55);
-            cpuLbl.ForeColor = Color.White;
-            cpuLbl.Font = new Font(new FontFamily("Meiryo"), 20, FontStyle.Bold);
-            cpuBar.Controls.Add(cpuLbl);
+            pnlCpuScore.Width = width;
+            lblCpuScore.Text = clsDF.conv0_0(cpuScore);
 
             // Memory
-            //ctlBorderPanel memBar = new ctlBorderPanel();
-            Panel memBar = new Panel();
             double memScore = clsSI.getSysValueDouble("Win32_WinSAT", "MemoryScore");
             width = clsDF.getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, memScore);
 
-            memBar.BackColor = Color.SandyBrown;
-            memBar.Width = width;
-            memBar.Dock = DockStyle.Left;
-            memBar.Margin = new Padding(0, 15, 0, 15);
-            tblSysScore.Controls.Add(memBar, 2, 1);
-
-            Label memLbl = new Label();
-            memLbl.Dock = DockStyle.Right;
-            memLbl.Width = 70;
-            memLbl.Margin = new Padding(0);
-            memLbl.TextAlign = ContentAlignment.MiddleRight;
-            memLbl.Text = clsDF.conv0_0(memScore);
-            //memLbl.ForeColor = Color.FromArgb(55, 55, 55);
-            memLbl.ForeColor = Color.White;
-            memLbl.Font = new Font(new FontFamily("Meiryo"), 20, FontStyle.Bold);
-            memBar.Controls.Add(memLbl);
+            pnlMemScore.Width = width;
+            lblMemScore.Text = clsDF.conv0_0(memScore);
 
             // Graphics
-            Panel gfxBar = new Panel();
             double gfxScore = clsSI.getSysValueDouble("Win32_WinSAT", "GraphicsScore");
             width = clsDF.getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, gfxScore);
 
-            gfxBar.BackColor = Color.YellowGreen;
-            gfxBar.Width = width;
-            gfxBar.Dock = DockStyle.Left;
-            gfxBar.Margin = new Padding(0, 15, 0, 15);
-            tblSysScore.Controls.Add(gfxBar, 2, 2);
-
-            Label gfxLbl = new Label();
-            gfxLbl.Dock = DockStyle.Right;
-            gfxLbl.Width = 70;
-            gfxLbl.Margin = new Padding(0);
-            gfxLbl.TextAlign = ContentAlignment.MiddleRight;
-            gfxLbl.Text = clsDF.conv0_0(gfxScore);
-            //gfxLbl.ForeColor = Color.FromArgb(55, 55, 55);
-            gfxLbl.ForeColor = Color.White;
-            gfxLbl.Font = new Font(new FontFamily("Meiryo"), 20, FontStyle.Bold);
-            gfxBar.Controls.Add(gfxLbl);
+            pnlGfxScore.Width = width;
+            lblGfxScore.Text = clsDF.conv0_0(gfxScore);
 
             // Game
-            Panel gameBar = new Panel();
             double gameScore = clsSI.getSysValueDouble("Win32_WinSAT", "D3DScore");
             width = clsDF.getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, gameScore);
 
-            gameBar.BackColor = Color.SkyBlue;
-            gameBar.Width = width;
-            gameBar.Dock = DockStyle.Left;
-            gameBar.Margin = new Padding(0, 15, 0, 15);
-            tblSysScore.Controls.Add(gameBar, 2, 3);
-
-            Label gameLbl = new Label();
-            gameLbl.Dock = DockStyle.Right;
-            gameLbl.Width = 70;
-            gameLbl.Margin = new Padding(0);
-            gameLbl.TextAlign = ContentAlignment.MiddleRight;
-            gameLbl.Text = clsDF.conv0_0(gameScore);
-            //gameLbl.ForeColor = Color.FromArgb(55, 55, 55);
-            gameLbl.ForeColor = Color.White;
-            gameLbl.Font = new Font(new FontFamily("Meiryo"), 20, FontStyle.Bold);
-            gameBar.Controls.Add(gameLbl);
+            pnlGameScore.Width = width;
+            lblGameScore.Text = clsDF.conv0_0(gameScore);
 
             // Primary Disk
-            Panel diskBar = new Panel();
             double diskScore = clsSI.getSysValueDouble("Win32_WinSAT", "DiskScore");
             width = clsDF.getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, diskScore);
 
-            diskBar.BackColor = Color.MediumSlateBlue;
-            diskBar.Width = width;
-            diskBar.Dock = DockStyle.Left;
-            diskBar.Margin = new Padding(0, 15, 0, 15);
-            tblSysScore.Controls.Add(diskBar, 2, 4);
-
-            Label diskLbl = new Label();
-            diskLbl.Dock = DockStyle.Right;
-            diskLbl.Width = 70;
-            diskLbl.Margin = new Padding(0);
-            diskLbl.TextAlign = ContentAlignment.MiddleRight;
-            diskLbl.Text = clsDF.conv0_0(diskScore);
-            //diskLbl.ForeColor = Color.FromArgb(55, 55, 55);
-            diskLbl.ForeColor = Color.White;
-            diskLbl.Font = new Font(new FontFamily("Meiryo"), 20, FontStyle.Bold);
-            diskBar.Controls.Add(diskLbl);
+            pnlDiskScore.Width = width;
+            lblDiskScore.Text = clsDF.conv0_0(diskScore);
 
             // Average (Total)
             double scoreTotal5 =
@@ -257,7 +195,7 @@ namespace winsat_reader
         // toolStrip 評価読み込み
         private void tsLoadEvaluation_Click(object sender, EventArgs e)
         {
-
+            setScoreData();
         }
     }
 }
