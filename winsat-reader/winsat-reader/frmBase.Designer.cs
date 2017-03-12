@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBase));
             this.tsMain = new System.Windows.Forms.ToolStrip();
-            this.tsExit = new System.Windows.Forms.ToolStripButton();
-            this.tsddEvaluation = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tsRunEvaluation = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsLoadEvaluation = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsHelp = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tsVersion = new System.Windows.Forms.ToolStripMenuItem();
             this.gbSysSummery = new System.Windows.Forms.GroupBox();
             this.tblSysSummery = new System.Windows.Forms.TableLayoutPanel();
             this.lblOS = new System.Windows.Forms.Label();
@@ -44,16 +38,7 @@
             this.lblMachineInfo = new System.Windows.Forms.Label();
             this.gbSysScore = new System.Windows.Forms.GroupBox();
             this.tblSysScore = new System.Windows.Forms.TableLayoutPanel();
-            this.lblCpuInfo = new System.Windows.Forms.Label();
-            this.lblMemInfo = new System.Windows.Forms.Label();
-            this.lblGfxInfo = new System.Windows.Forms.Label();
-            this.lblGameInfo = new System.Windows.Forms.Label();
-            this.lblDiskInfo = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.btnCpuDetail = new System.Windows.Forms.Button();
-            this.btnMemDetail = new System.Windows.Forms.Button();
-            this.btnGfxDetail = new System.Windows.Forms.Button();
-            this.btnHddDetail = new System.Windows.Forms.Button();
             this.tblTotal = new System.Windows.Forms.TableLayoutPanel();
             this.pnlTotal5 = new System.Windows.Forms.Panel();
             this.lblTotal5 = new System.Windows.Forms.Label();
@@ -69,6 +54,21 @@
             this.lblGameScore = new System.Windows.Forms.Label();
             this.pnlDiskScore = new System.Windows.Forms.Panel();
             this.lblDiskScore = new System.Windows.Forms.Label();
+            this.lblCpuInfo = new System.Windows.Forms.Label();
+            this.lblMemInfo = new System.Windows.Forms.Label();
+            this.lblGfxInfo = new System.Windows.Forms.Label();
+            this.lblGameInfo = new System.Windows.Forms.Label();
+            this.lblDiskInfo = new System.Windows.Forms.Label();
+            this.btnCpuDetail = new System.Windows.Forms.Button();
+            this.btnMemDetail = new System.Windows.Forms.Button();
+            this.btnGfxDetail = new System.Windows.Forms.Button();
+            this.btnHddDetail = new System.Windows.Forms.Button();
+            this.tsExit = new System.Windows.Forms.ToolStripButton();
+            this.tsddEvaluation = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsRunEvaluation = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsLoadEvaluation = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsHelp = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsVersion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMain.SuspendLayout();
             this.gbSysSummery.SuspendLayout();
             this.tblSysSummery.SuspendLayout();
@@ -95,60 +95,6 @@
             this.tsMain.Size = new System.Drawing.Size(784, 25);
             this.tsMain.TabIndex = 0;
             this.tsMain.Text = "toolStrip1";
-            // 
-            // tsExit
-            // 
-            this.tsExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsExit.Image = ((System.Drawing.Image)(resources.GetObject("tsExit.Image")));
-            this.tsExit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsExit.Name = "tsExit";
-            this.tsExit.Size = new System.Drawing.Size(50, 22);
-            this.tsExit.Text = "終了(&C)";
-            this.tsExit.Click += new System.EventHandler(this.tsExit_Click);
-            // 
-            // tsddEvaluation
-            // 
-            this.tsddEvaluation.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsddEvaluation.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsRunEvaluation,
-            this.tsLoadEvaluation});
-            this.tsddEvaluation.Image = ((System.Drawing.Image)(resources.GetObject("tsddEvaluation.Image")));
-            this.tsddEvaluation.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsddEvaluation.Name = "tsddEvaluation";
-            this.tsddEvaluation.Size = new System.Drawing.Size(80, 22);
-            this.tsddEvaluation.Text = "システム評価";
-            this.tsddEvaluation.ToolTipText = "システム評価";
-            // 
-            // tsRunEvaluation
-            // 
-            this.tsRunEvaluation.Name = "tsRunEvaluation";
-            this.tsRunEvaluation.Size = new System.Drawing.Size(140, 22);
-            this.tsRunEvaluation.Text = "評価実行 (&R)";
-            this.tsRunEvaluation.Click += new System.EventHandler(this.tsRunEvaluation_Click);
-            // 
-            // tsLoadEvaluation
-            // 
-            this.tsLoadEvaluation.Name = "tsLoadEvaluation";
-            this.tsLoadEvaluation.Size = new System.Drawing.Size(140, 22);
-            this.tsLoadEvaluation.Text = "評価読込 (&L)";
-            this.tsLoadEvaluation.Click += new System.EventHandler(this.tsLoadEvaluation_Click);
-            // 
-            // tsHelp
-            // 
-            this.tsHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsVersion});
-            this.tsHelp.Image = ((System.Drawing.Image)(resources.GetObject("tsHelp.Image")));
-            this.tsHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsHelp.Name = "tsHelp";
-            this.tsHelp.Size = new System.Drawing.Size(49, 22);
-            this.tsHelp.Text = "ヘルプ";
-            // 
-            // tsVersion
-            // 
-            this.tsVersion.Name = "tsVersion";
-            this.tsVersion.Size = new System.Drawing.Size(160, 22);
-            this.tsVersion.Text = "バージョン情報 (&V)";
             // 
             // gbSysSummery
             // 
@@ -284,85 +230,6 @@
             this.tblSysScore.Size = new System.Drawing.Size(778, 412);
             this.tblSysScore.TabIndex = 0;
             // 
-            // lblCpuInfo
-            // 
-            this.lblCpuInfo.AutoSize = true;
-            this.lblCpuInfo.BackColor = System.Drawing.Color.White;
-            this.lblCpuInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCpuInfo.Font = new System.Drawing.Font("メイリオ", 10F);
-            this.lblCpuInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCpuInfo.Location = new System.Drawing.Point(77, 2);
-            this.lblCpuInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.lblCpuInfo.Name = "lblCpuInfo";
-            this.lblCpuInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblCpuInfo.Size = new System.Drawing.Size(350, 61);
-            this.lblCpuInfo.TabIndex = 0;
-            this.lblCpuInfo.Text = "CPU";
-            this.lblCpuInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblMemInfo
-            // 
-            this.lblMemInfo.AutoSize = true;
-            this.lblMemInfo.BackColor = System.Drawing.Color.White;
-            this.lblMemInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMemInfo.Font = new System.Drawing.Font("メイリオ", 10F);
-            this.lblMemInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblMemInfo.Location = new System.Drawing.Point(77, 67);
-            this.lblMemInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.lblMemInfo.Name = "lblMemInfo";
-            this.lblMemInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblMemInfo.Size = new System.Drawing.Size(350, 61);
-            this.lblMemInfo.TabIndex = 1;
-            this.lblMemInfo.Text = "メモリ (RAM)";
-            this.lblMemInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblGfxInfo
-            // 
-            this.lblGfxInfo.AutoSize = true;
-            this.lblGfxInfo.BackColor = System.Drawing.Color.White;
-            this.lblGfxInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGfxInfo.Font = new System.Drawing.Font("メイリオ", 10F);
-            this.lblGfxInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblGfxInfo.Location = new System.Drawing.Point(77, 132);
-            this.lblGfxInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.lblGfxInfo.Name = "lblGfxInfo";
-            this.lblGfxInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblGfxInfo.Size = new System.Drawing.Size(350, 61);
-            this.lblGfxInfo.TabIndex = 2;
-            this.lblGfxInfo.Text = "グラフィックス";
-            this.lblGfxInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblGameInfo
-            // 
-            this.lblGameInfo.AutoSize = true;
-            this.lblGameInfo.BackColor = System.Drawing.Color.White;
-            this.lblGameInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGameInfo.Font = new System.Drawing.Font("メイリオ", 10F);
-            this.lblGameInfo.Location = new System.Drawing.Point(77, 197);
-            this.lblGameInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.lblGameInfo.Name = "lblGameInfo";
-            this.lblGameInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblGameInfo.Size = new System.Drawing.Size(350, 61);
-            this.lblGameInfo.TabIndex = 3;
-            this.lblGameInfo.Text = "ゲーム用 グラフィックス";
-            this.lblGameInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDiskInfo
-            // 
-            this.lblDiskInfo.AutoSize = true;
-            this.lblDiskInfo.BackColor = System.Drawing.Color.White;
-            this.lblDiskInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDiskInfo.Font = new System.Drawing.Font("メイリオ", 10F);
-            this.lblDiskInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDiskInfo.Location = new System.Drawing.Point(77, 262);
-            this.lblDiskInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.lblDiskInfo.Name = "lblDiskInfo";
-            this.lblDiskInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblDiskInfo.Size = new System.Drawing.Size(350, 61);
-            this.lblDiskInfo.TabIndex = 4;
-            this.lblDiskInfo.Text = "プライマリ ディスク";
-            this.lblDiskInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
@@ -377,50 +244,6 @@
             this.lblTotal.TabIndex = 5;
             this.lblTotal.Text = "総合\r\n（合計）";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnCpuDetail
-            // 
-            this.btnCpuDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCpuDetail.Image = global::winsat_reader.resImg.cpu60;
-            this.btnCpuDetail.Location = new System.Drawing.Point(3, 3);
-            this.btnCpuDetail.Name = "btnCpuDetail";
-            this.btnCpuDetail.Size = new System.Drawing.Size(71, 59);
-            this.btnCpuDetail.TabIndex = 6;
-            this.btnCpuDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCpuDetail.UseVisualStyleBackColor = true;
-            // 
-            // btnMemDetail
-            // 
-            this.btnMemDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMemDetail.Image = global::winsat_reader.resImg.mem60;
-            this.btnMemDetail.Location = new System.Drawing.Point(3, 68);
-            this.btnMemDetail.Name = "btnMemDetail";
-            this.btnMemDetail.Size = new System.Drawing.Size(71, 59);
-            this.btnMemDetail.TabIndex = 7;
-            this.btnMemDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMemDetail.UseVisualStyleBackColor = true;
-            // 
-            // btnGfxDetail
-            // 
-            this.btnGfxDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnGfxDetail.Image = global::winsat_reader.resImg.display60;
-            this.btnGfxDetail.Location = new System.Drawing.Point(3, 133);
-            this.btnGfxDetail.Name = "btnGfxDetail";
-            this.btnGfxDetail.Size = new System.Drawing.Size(71, 59);
-            this.btnGfxDetail.TabIndex = 8;
-            this.btnGfxDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGfxDetail.UseVisualStyleBackColor = true;
-            // 
-            // btnHddDetail
-            // 
-            this.btnHddDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHddDetail.Image = global::winsat_reader.resImg.hdd40;
-            this.btnHddDetail.Location = new System.Drawing.Point(3, 263);
-            this.btnHddDetail.Name = "btnHddDetail";
-            this.btnHddDetail.Size = new System.Drawing.Size(71, 59);
-            this.btnHddDetail.TabIndex = 9;
-            this.btnHddDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHddDetail.UseVisualStyleBackColor = true;
             // 
             // tblTotal
             // 
@@ -611,6 +434,189 @@
             this.lblDiskScore.TabIndex = 0;
             this.lblDiskScore.Text = "4.4";
             this.lblDiskScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCpuInfo
+            // 
+            this.lblCpuInfo.AutoSize = true;
+            this.lblCpuInfo.BackColor = System.Drawing.Color.White;
+            this.lblCpuInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCpuInfo.Font = new System.Drawing.Font("メイリオ", 10F);
+            this.lblCpuInfo.Image = global::winsat_reader.resImg.label54;
+            this.lblCpuInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCpuInfo.Location = new System.Drawing.Point(77, 2);
+            this.lblCpuInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.lblCpuInfo.Name = "lblCpuInfo";
+            this.lblCpuInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblCpuInfo.Size = new System.Drawing.Size(350, 61);
+            this.lblCpuInfo.TabIndex = 0;
+            this.lblCpuInfo.Text = "CPU";
+            this.lblCpuInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMemInfo
+            // 
+            this.lblMemInfo.AutoSize = true;
+            this.lblMemInfo.BackColor = System.Drawing.Color.White;
+            this.lblMemInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblMemInfo.Font = new System.Drawing.Font("メイリオ", 10F);
+            this.lblMemInfo.Image = global::winsat_reader.resImg.label54;
+            this.lblMemInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblMemInfo.Location = new System.Drawing.Point(77, 67);
+            this.lblMemInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.lblMemInfo.Name = "lblMemInfo";
+            this.lblMemInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblMemInfo.Size = new System.Drawing.Size(350, 61);
+            this.lblMemInfo.TabIndex = 1;
+            this.lblMemInfo.Text = "メモリ (RAM)";
+            this.lblMemInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblGfxInfo
+            // 
+            this.lblGfxInfo.AutoSize = true;
+            this.lblGfxInfo.BackColor = System.Drawing.Color.White;
+            this.lblGfxInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblGfxInfo.Font = new System.Drawing.Font("メイリオ", 10F);
+            this.lblGfxInfo.Image = global::winsat_reader.resImg.label54;
+            this.lblGfxInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGfxInfo.Location = new System.Drawing.Point(77, 132);
+            this.lblGfxInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.lblGfxInfo.Name = "lblGfxInfo";
+            this.lblGfxInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblGfxInfo.Size = new System.Drawing.Size(350, 61);
+            this.lblGfxInfo.TabIndex = 2;
+            this.lblGfxInfo.Text = "グラフィックス";
+            this.lblGfxInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblGameInfo
+            // 
+            this.lblGameInfo.AutoSize = true;
+            this.lblGameInfo.BackColor = System.Drawing.Color.White;
+            this.lblGameInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblGameInfo.Font = new System.Drawing.Font("メイリオ", 10F);
+            this.lblGameInfo.Image = global::winsat_reader.resImg.label5;
+            this.lblGameInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGameInfo.Location = new System.Drawing.Point(77, 197);
+            this.lblGameInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.lblGameInfo.Name = "lblGameInfo";
+            this.lblGameInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblGameInfo.Size = new System.Drawing.Size(350, 61);
+            this.lblGameInfo.TabIndex = 3;
+            this.lblGameInfo.Text = "ゲーム用 グラフィックス";
+            this.lblGameInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDiskInfo
+            // 
+            this.lblDiskInfo.AutoSize = true;
+            this.lblDiskInfo.BackColor = System.Drawing.Color.White;
+            this.lblDiskInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDiskInfo.Font = new System.Drawing.Font("メイリオ", 10F);
+            this.lblDiskInfo.Image = global::winsat_reader.resImg.label54;
+            this.lblDiskInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDiskInfo.Location = new System.Drawing.Point(77, 262);
+            this.lblDiskInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.lblDiskInfo.Name = "lblDiskInfo";
+            this.lblDiskInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblDiskInfo.Size = new System.Drawing.Size(350, 61);
+            this.lblDiskInfo.TabIndex = 4;
+            this.lblDiskInfo.Text = "プライマリ ディスク";
+            this.lblDiskInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCpuDetail
+            // 
+            this.btnCpuDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCpuDetail.Image = global::winsat_reader.resImg.cpu60;
+            this.btnCpuDetail.Location = new System.Drawing.Point(3, 3);
+            this.btnCpuDetail.Name = "btnCpuDetail";
+            this.btnCpuDetail.Size = new System.Drawing.Size(71, 59);
+            this.btnCpuDetail.TabIndex = 6;
+            this.btnCpuDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCpuDetail.UseVisualStyleBackColor = true;
+            // 
+            // btnMemDetail
+            // 
+            this.btnMemDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMemDetail.Image = global::winsat_reader.resImg.mem60;
+            this.btnMemDetail.Location = new System.Drawing.Point(3, 68);
+            this.btnMemDetail.Name = "btnMemDetail";
+            this.btnMemDetail.Size = new System.Drawing.Size(71, 59);
+            this.btnMemDetail.TabIndex = 7;
+            this.btnMemDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMemDetail.UseVisualStyleBackColor = true;
+            // 
+            // btnGfxDetail
+            // 
+            this.btnGfxDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGfxDetail.Image = global::winsat_reader.resImg.display60;
+            this.btnGfxDetail.Location = new System.Drawing.Point(3, 133);
+            this.btnGfxDetail.Name = "btnGfxDetail";
+            this.btnGfxDetail.Size = new System.Drawing.Size(71, 59);
+            this.btnGfxDetail.TabIndex = 8;
+            this.btnGfxDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGfxDetail.UseVisualStyleBackColor = true;
+            // 
+            // btnHddDetail
+            // 
+            this.btnHddDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHddDetail.Image = global::winsat_reader.resImg.hdd40;
+            this.btnHddDetail.Location = new System.Drawing.Point(3, 263);
+            this.btnHddDetail.Name = "btnHddDetail";
+            this.btnHddDetail.Size = new System.Drawing.Size(71, 59);
+            this.btnHddDetail.TabIndex = 9;
+            this.btnHddDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHddDetail.UseVisualStyleBackColor = true;
+            // 
+            // tsExit
+            // 
+            this.tsExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsExit.Image = ((System.Drawing.Image)(resources.GetObject("tsExit.Image")));
+            this.tsExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsExit.Name = "tsExit";
+            this.tsExit.Size = new System.Drawing.Size(50, 22);
+            this.tsExit.Text = "終了(&C)";
+            this.tsExit.Click += new System.EventHandler(this.tsExit_Click);
+            // 
+            // tsddEvaluation
+            // 
+            this.tsddEvaluation.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsddEvaluation.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsRunEvaluation,
+            this.tsLoadEvaluation});
+            this.tsddEvaluation.Image = ((System.Drawing.Image)(resources.GetObject("tsddEvaluation.Image")));
+            this.tsddEvaluation.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsddEvaluation.Name = "tsddEvaluation";
+            this.tsddEvaluation.Size = new System.Drawing.Size(80, 22);
+            this.tsddEvaluation.Text = "システム評価";
+            this.tsddEvaluation.ToolTipText = "システム評価";
+            // 
+            // tsRunEvaluation
+            // 
+            this.tsRunEvaluation.Name = "tsRunEvaluation";
+            this.tsRunEvaluation.Size = new System.Drawing.Size(140, 22);
+            this.tsRunEvaluation.Text = "評価実行 (&R)";
+            this.tsRunEvaluation.Click += new System.EventHandler(this.tsRunEvaluation_Click);
+            // 
+            // tsLoadEvaluation
+            // 
+            this.tsLoadEvaluation.Name = "tsLoadEvaluation";
+            this.tsLoadEvaluation.Size = new System.Drawing.Size(140, 22);
+            this.tsLoadEvaluation.Text = "評価読込 (&L)";
+            this.tsLoadEvaluation.Click += new System.EventHandler(this.tsLoadEvaluation_Click);
+            // 
+            // tsHelp
+            // 
+            this.tsHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsVersion});
+            this.tsHelp.Image = ((System.Drawing.Image)(resources.GetObject("tsHelp.Image")));
+            this.tsHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsHelp.Name = "tsHelp";
+            this.tsHelp.Size = new System.Drawing.Size(49, 22);
+            this.tsHelp.Text = "ヘルプ";
+            // 
+            // tsVersion
+            // 
+            this.tsVersion.Name = "tsVersion";
+            this.tsVersion.Size = new System.Drawing.Size(160, 22);
+            this.tsVersion.Text = "バージョン情報 (&V)";
             // 
             // frmBase
             // 
