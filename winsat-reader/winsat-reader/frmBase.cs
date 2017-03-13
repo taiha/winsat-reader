@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
+using System.Diagnostics;
 
 namespace winsat_reader
 {
@@ -44,6 +45,7 @@ namespace winsat_reader
         }
 
         // 枠線付きPanel
+        /*
         private void barCheck()
         {
             int width = 0;
@@ -58,6 +60,7 @@ namespace winsat_reader
             cpuBar.Margin = new Padding(0, 15, 0, 15);
             tblSysScore.Controls.Add(cpuBar, 2, 0);
         }
+        */
 
         private void valueReset()
         {
@@ -131,6 +134,62 @@ namespace winsat_reader
                 clsDF.convCap(clsSI.driveSizeVal, 0));
         }
 
+        private void chkRunWinsat()
+        {
+            // クライアント版Windowsか否か
+            if (!clsSC.isClientWindows())
+            {
+                MessageBox.Show("Windows Server環境にはWinSAT.exeが存在しないため、計測を実行できません。\r\nWindows 7からWindows 10までのいずれかの環境を使用してください。", "実行エラー", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            // 電源接続状態
+            if (!clsSC.isACConnected())
+            {
+                MessageBox.Show("コンピューターがAC電源に接続されていないか、接続状態が不明です。WinSATによる評価を実行するには、AC電源に接続されている必要があります。\r\n\r\n電源に接続されていることを確認し、再度評価を実行してください。", "電源エラー", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            runWinsat();
+        }
+
+        private void runWinsat()
+        {
+            Process proc = new Process();
+            proc.StartInfo.FileName = "C:\\Windows\\System32\\WinSAT.exe";
+            proc.StartInfo.Verb = "runas";
+            proc.StartInfo.RedirectStandardOutput = false;
+            proc.StartInfo.Arguments = "formal -restart clean";
+            proc.Start();
+
+            proc.WaitForExit();
+            proc.Close();
+        }
+
+        private void chkReadScoreData()
+        {
+            double winsatState = clsSI.getSysValueDoubleRel("Win32_WinSAT", "WinSATAssessmentState");
+            DialogResult result;
+            switch (winsatState)
+            {
+                case 3:
+                    result = MessageBox.Show("評価結果が正常に取得できませんでした。\r\n再度評価を実行しますか？", "実行エラー", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    break;
+                case 2:
+                    result = MessageBox.Show("前回評価時からハードウェア構成が変更されている、またはその他の理由により再評価が必要です。\r\n再度評価を実行しますか？", "情報", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    break;
+                default:
+                    result = DialogResult.No;
+                    break;
+            }
+            if (result == DialogResult.Yes)
+            {
+                chkRunWinsat();
+                chkReadScoreData();
+                return;
+            }
+            setScoreData();
+        }
+
         private void setScoreData()
         {
             int width = 0;
@@ -192,13 +251,14 @@ namespace winsat_reader
         // toolStrip 評価実行
         private void tsRunEvaluation_Click(object sender, EventArgs e)
         {
-
+            chkRunWinsat();
+            chkReadScoreData();
         }
 
         // toolStrip 評価読み込み
         private void tsLoadEvaluation_Click(object sender, EventArgs e)
         {
-            setScoreData();
+            chkReadScoreData();
         }
 
         // toolStrip バージョン情報

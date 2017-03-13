@@ -523,6 +523,7 @@
             // btnCpuDetail
             // 
             this.btnCpuDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCpuDetail.Enabled = false;
             this.btnCpuDetail.Image = global::winsat_reader.resImg.cpu60;
             this.btnCpuDetail.Location = new System.Drawing.Point(3, 3);
             this.btnCpuDetail.Name = "btnCpuDetail";
@@ -534,6 +535,7 @@
             // btnMemDetail
             // 
             this.btnMemDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMemDetail.Enabled = false;
             this.btnMemDetail.Image = global::winsat_reader.resImg.mem60;
             this.btnMemDetail.Location = new System.Drawing.Point(3, 68);
             this.btnMemDetail.Name = "btnMemDetail";
@@ -545,6 +547,7 @@
             // btnGfxDetail
             // 
             this.btnGfxDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGfxDetail.Enabled = false;
             this.btnGfxDetail.Image = global::winsat_reader.resImg.display60;
             this.btnGfxDetail.Location = new System.Drawing.Point(3, 133);
             this.btnGfxDetail.Name = "btnGfxDetail";
@@ -556,6 +559,7 @@
             // btnHddDetail
             // 
             this.btnHddDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHddDetail.Enabled = false;
             this.btnHddDetail.Image = global::winsat_reader.resImg.hdd40;
             this.btnHddDetail.Location = new System.Drawing.Point(3, 263);
             this.btnHddDetail.Name = "btnHddDetail";

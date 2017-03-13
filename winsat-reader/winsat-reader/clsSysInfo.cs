@@ -16,7 +16,7 @@ namespace winsat_reader
         private ManagementObjectCollection moc = null;
         private DataTable infoDt = null;
 
-        // Category で指定されたClassからデータ取得、DataTableに格納してreturn
+        // Category で指定されたClassからデータ取得、"moc" に格納
         public void getSysInfo(string category)
         {
             mgmtClass = category;
@@ -25,10 +25,10 @@ namespace winsat_reader
             moc = mc.GetInstances();
         }
 
-        // DataTableそのまんま取得
-        public DataTable getInfoDt(string winclass)
+        // DataTable
+        public DataTable getInfoDt(string winclass, bool reload)
         {
-            if (mgmtClass != winclass)
+            if (mgmtClass != winclass || reload == true)
             {
                 getSysInfo(winclass);
             }
@@ -59,8 +59,29 @@ namespace winsat_reader
             string val = "";
             if (mgmtClass != winclass)
             {
-                getInfoDt(winclass);
+                getInfoDt(winclass, false);
             }
+
+            valRows = infoDt.Select("NAME = '" + property + "'");
+            if (valRows != null)
+            {
+                val = valRows[0][1].ToString();
+            }
+            else
+            {
+                val = "unknown";
+            }
+
+
+            return val;
+        }
+
+        // 指定Category内の指定Propertyをreturn（string）, DataTableリロード
+        public string getSysValueStrRel(string winclass, string property)
+        {
+            DataRow[] valRows = null;
+            string val = "";
+            getInfoDt(winclass, true);
 
             valRows = infoDt.Select("NAME = '" + property + "'");
             if (valRows != null)
@@ -84,8 +105,29 @@ namespace winsat_reader
 
             if (mgmtClass != winclass)
             {
-                getInfoDt(winclass);
+                getInfoDt(winclass, false);
             }
+
+            valRows = infoDt.Select("NAME = '" + property + "'");
+            if (valRows != null)
+            {
+                val = Convert.ToDouble(valRows[0][1]);
+            }
+            else
+            {
+                val = 0;
+            }
+
+            return val;
+        }
+
+        // DataTableから指定Propertyの値をreturn（double）, reload
+        public double getSysValueDoubleRel(string winclass, string property)
+        {
+            DataRow[] valRows;
+            double val = 0;
+
+            getInfoDt(winclass, true);
 
             valRows = infoDt.Select("NAME = '" + property + "'");
             if (valRows != null)

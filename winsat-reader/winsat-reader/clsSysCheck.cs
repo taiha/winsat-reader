@@ -42,9 +42,8 @@ namespace winsat_reader
 
         public int getWinVer()
         {
-            clsSI = new clsSysInfo();
-            string winNTVerStr = Environment.Version.ToString();
-            winNTVerStr = (winNTVerStr.Split('.'))[0] + "." + (winNTVerStr.Split('.'))[1];
+            string winNTVerStr = Environment.Version.Major.ToString() + "." + Environment.Version.Minor.ToString();
+            //winNTVerStr = (winNTVerStr.Split('.'))[0] + "." + (winNTVerStr.Split('.'))[1];
             double winNTVer = double.Parse(winNTVerStr);
             int winVer = 0;
 
@@ -66,6 +65,19 @@ namespace winsat_reader
             }
             //winVer = 7;   //テスト用
             return winVer;
+        }
+
+        public bool isClientWindows()
+        {
+            bool isClient = false;
+            clsSI = new clsSysInfo();
+
+            if (clsSI.getSysValueStr("Win32_OperatingSystem", "ProductType") == "1")
+            {
+                isClient = true;
+            }
+
+            return isClient;
         }
     }
 }

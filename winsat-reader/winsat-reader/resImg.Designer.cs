@@ -199,15 +199,5 @@ namespace winsat_reader {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
-        /// </summary>
-        internal static System.Drawing.Bitmap winsat_reader_ico {
-            get {
-                object obj = ResourceManager.GetObject("winsat_reader_ico", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
