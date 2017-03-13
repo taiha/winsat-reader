@@ -1,3 +1,4 @@
+
 # winsat-reader
 
 ## なにこれ
@@ -35,6 +36,10 @@ Windows 8.1以降から "システムのプロパティ" にGUIが搭載され�
 - とりあえずMPL 2.0
   - "何かに使った" とかあれば、一言頂けると
   
+## 動作確認済み環境
+- Windows 10 64bit
+- Windows 10 32bit（予定）
+
 ## 作者
 Twitter: [@musashino_205](https://twitter.com/musashino_205)
 
