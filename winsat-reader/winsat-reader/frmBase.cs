@@ -336,7 +336,7 @@ namespace winsat_reader
 
 			if (ChkWinSATState(ref err) != 1)
 			{
-				MessageBox.Show(err + "システムの評価を再実行してください。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(err + "システムの評価を再実行してください。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				return;
 			}
 			SetScoreData();
@@ -354,7 +354,7 @@ namespace winsat_reader
 			//chkReadScoreData();
 			if (ChkWinSATState(ref err) != 1)
 			{
-				MessageBox.Show(err + "システムの評価を再実行してください。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(err + "システムの評価を再実行してください。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				return;
 			}
 
