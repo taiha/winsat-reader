@@ -62,12 +62,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsSysCheck.cs" />
     <Compile Include="ctlBorderPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="clsDataFormat.cs" />
-    <Compile Include="clsSysInfo.cs" />
     <Compile Include="frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +90,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>resImg.resx</DependentUpon>
     </Compile>
+    <Compile Include="SysRegistry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WmiStore.cs" />
     <EmbeddedResource Include="frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
