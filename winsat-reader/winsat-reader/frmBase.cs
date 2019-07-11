@@ -238,7 +238,7 @@ namespace winsat_reader
 			lblTotal4.Text = scoreTotal4.ToString("0.0");
 		}
 
-		private int ChkWinsatAvailability(ref string err)
+		private int ChkWinsatAvailability(ref string err, bool isload)
 		{
 			// クライアント版Windowsか否か
 			if (Convert.ToUInt32(GetPropValue("ProductType", os_wmi)) != 1)
@@ -248,7 +248,7 @@ namespace winsat_reader
 				return 1;
 			}
 			// 電源接続状態
-			if (SystemInformation.PowerStatus.PowerLineStatus != PowerLineStatus.Online)
+			if (!isload && SystemInformation.PowerStatus.PowerLineStatus != PowerLineStatus.Online)
 			{
 				err = "コンピューターがAC電源に接続されていないか、接続状態が不明です。"
 					+ "WinSATによる評価を実行するには、AC電源に接続されている必要があります。\r\n\r\n"
@@ -322,7 +322,7 @@ namespace winsat_reader
 		private void tsRunEvaluation_Click(object sender, EventArgs e)
 		{
 			string err = null;
-			if (ChkWinsatAvailability(ref err) != 0)
+			if (ChkWinsatAvailability(ref err, false) != 0)
 			{
 				MessageBox.Show(err, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
@@ -346,7 +346,7 @@ namespace winsat_reader
 		private void tsLoadEvaluation_Click(object sender, EventArgs e)
 		{
 			string err = null;
-			if (ChkWinsatAvailability(ref err) != 0)
+			if (ChkWinsatAvailability(ref err, true) != 0)
 			{
 				MessageBox.Show(err, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
