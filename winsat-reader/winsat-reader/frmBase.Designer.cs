@@ -29,6 +29,26 @@
         private void InitializeComponent()
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBase));
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 5.6D);
+			System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 2.2D);
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 5.9D);
+			System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 3.2D);
+			System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 8.3D);
+			System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 2.1D);
+			System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 9.9D);
 			this.tsMain = new System.Windows.Forms.ToolStrip();
 			this.tsExit = new System.Windows.Forms.ToolStripButton();
 			this.tsddEvaluation = new System.Windows.Forms.ToolStripDropDownButton();
@@ -54,34 +74,15 @@
 			this.btnMemDetail = new System.Windows.Forms.Button();
 			this.btnGfxDetail = new System.Windows.Forms.Button();
 			this.btnHddDetail = new System.Windows.Forms.Button();
-			this.tblTotal = new System.Windows.Forms.TableLayoutPanel();
-			this.pnlTotal5 = new System.Windows.Forms.Panel();
-			this.lblTotal5 = new System.Windows.Forms.Label();
-			this.pnlTotal4 = new System.Windows.Forms.Panel();
-			this.lblTotal4 = new System.Windows.Forms.Label();
-			this.pnlCpuScore = new System.Windows.Forms.Panel();
-			this.lblCpuScore = new System.Windows.Forms.Label();
-			this.pnlMemScore = new System.Windows.Forms.Panel();
-			this.lblMemScore = new System.Windows.Forms.Label();
-			this.pnlGfxScore = new System.Windows.Forms.Panel();
-			this.lblGfxScore = new System.Windows.Forms.Label();
-			this.pnlGameScore = new System.Windows.Forms.Panel();
-			this.lblGameScore = new System.Windows.Forms.Label();
-			this.pnlDiskScore = new System.Windows.Forms.Panel();
-			this.lblDiskScore = new System.Windows.Forms.Label();
+			this.totalChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.elementChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.tsMain.SuspendLayout();
 			this.gbSysSummery.SuspendLayout();
 			this.tblSysSummery.SuspendLayout();
 			this.gbSysScore.SuspendLayout();
 			this.tblSysScore.SuspendLayout();
-			this.tblTotal.SuspendLayout();
-			this.pnlTotal5.SuspendLayout();
-			this.pnlTotal4.SuspendLayout();
-			this.pnlCpuScore.SuspendLayout();
-			this.pnlMemScore.SuspendLayout();
-			this.pnlGfxScore.SuspendLayout();
-			this.pnlGameScore.SuspendLayout();
-			this.pnlDiskScore.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.totalChart)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.elementChart)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tsMain
@@ -266,12 +267,8 @@
 			this.tblSysScore.Controls.Add(this.btnMemDetail, 0, 1);
 			this.tblSysScore.Controls.Add(this.btnGfxDetail, 0, 2);
 			this.tblSysScore.Controls.Add(this.btnHddDetail, 0, 4);
-			this.tblSysScore.Controls.Add(this.tblTotal, 2, 5);
-			this.tblSysScore.Controls.Add(this.pnlCpuScore, 2, 0);
-			this.tblSysScore.Controls.Add(this.pnlMemScore, 2, 1);
-			this.tblSysScore.Controls.Add(this.pnlGfxScore, 2, 2);
-			this.tblSysScore.Controls.Add(this.pnlGameScore, 2, 3);
-			this.tblSysScore.Controls.Add(this.pnlDiskScore, 2, 4);
+			this.tblSysScore.Controls.Add(this.totalChart, 2, 5);
+			this.tblSysScore.Controls.Add(this.elementChart, 2, 0);
 			this.tblSysScore.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tblSysScore.Location = new System.Drawing.Point(3, 21);
 			this.tblSysScore.Name = "tblSysScore";
@@ -382,7 +379,7 @@
 			this.lblTotal.Name = "lblTotal";
 			this.lblTotal.Size = new System.Drawing.Size(350, 83);
 			this.lblTotal.TabIndex = 5;
-			this.lblTotal.Text = "総合\r\n（合計）";
+			this.lblTotal.Text = "合計\r\n（4項目合計）";
 			this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// btnCpuDetail
@@ -433,195 +430,222 @@
 			this.btnHddDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnHddDetail.UseVisualStyleBackColor = true;
 			// 
-			// tblTotal
+			// totalChart
 			// 
-			this.tblTotal.ColumnCount = 1;
-			this.tblTotal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tblTotal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tblTotal.Controls.Add(this.pnlTotal5, 0, 0);
-			this.tblTotal.Controls.Add(this.pnlTotal4, 0, 1);
-			this.tblTotal.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tblTotal.Location = new System.Drawing.Point(427, 325);
-			this.tblTotal.Margin = new System.Windows.Forms.Padding(0);
-			this.tblTotal.Name = "tblTotal";
-			this.tblTotal.RowCount = 2;
-			this.tblTotal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tblTotal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tblTotal.Size = new System.Drawing.Size(351, 87);
-			this.tblTotal.TabIndex = 10;
+			chartArea7.AxisX.LabelStyle.Enabled = false;
+			chartArea7.AxisX.MajorGrid.Enabled = false;
+			chartArea7.AxisX.MajorTickMark.Enabled = false;
+			chartArea7.AxisX.Maximum = 1.7D;
+			chartArea7.AxisX.Minimum = 0.3D;
+			chartArea7.AxisY.LabelStyle.Enabled = false;
+			chartArea7.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea7.AxisY.MajorGrid.Interval = 10D;
+			chartArea7.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea7.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea7.AxisY.MajorTickMark.Enabled = false;
+			chartArea7.AxisY.Maximum = 49.5D;
+			chartArea7.AxisY.Minimum = 0D;
+			chartArea7.AxisY.MinorGrid.Enabled = true;
+			chartArea7.AxisY.MinorGrid.Interval = 10D;
+			chartArea7.AxisY.MinorGrid.IntervalOffset = 5D;
+			chartArea7.AxisY.MinorGrid.LineColor = System.Drawing.Color.Silver;
+			chartArea7.AxisY.MinorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+			chartArea7.Name = "ChartArea1";
+			chartArea7.Position.Auto = false;
+			chartArea7.Position.Height = 100F;
+			chartArea7.Position.Width = 100F;
+			this.totalChart.ChartAreas.Add(chartArea7);
+			this.totalChart.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.totalChart.Location = new System.Drawing.Point(430, 328);
+			this.totalChart.Name = "totalChart";
+			this.totalChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+			this.totalChart.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.MediumAquamarine,
+        System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))))};
+			series8.ChartArea = "ChartArea1";
+			series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series8.CustomProperties = "BarLabelStyle=Right";
+			series8.Font = new System.Drawing.Font("Meiryo UI", 16F, System.Drawing.FontStyle.Bold);
+			series8.IsValueShownAsLabel = true;
+			series8.LabelForeColor = System.Drawing.Color.White;
+			series8.LabelFormat = "0.0";
+			series8.Name = "Series1";
+			series8.Points.Add(dataPoint8);
+			series8.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+			series8.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+			series9.ChartArea = "ChartArea1";
+			series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series9.CustomProperties = "BarLabelStyle=Right";
+			series9.Font = new System.Drawing.Font("Meiryo UI", 16F, System.Drawing.FontStyle.Bold);
+			series9.IsValueShownAsLabel = true;
+			series9.LabelForeColor = System.Drawing.Color.White;
+			series9.LabelFormat = "0.0";
+			series9.Name = "Series2";
+			series9.Points.Add(dataPoint9);
+			this.totalChart.Series.Add(series8);
+			this.totalChart.Series.Add(series9);
+			this.totalChart.Size = new System.Drawing.Size(345, 81);
+			this.totalChart.TabIndex = 16;
+			this.totalChart.Text = "chart6";
 			// 
-			// pnlTotal5
+			// elementChart
 			// 
-			this.pnlTotal5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.pnlTotal5.BackColor = System.Drawing.Color.MediumAquamarine;
-			this.pnlTotal5.Controls.Add(this.lblTotal5);
-			this.pnlTotal5.Location = new System.Drawing.Point(0, 10);
-			this.pnlTotal5.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-			this.pnlTotal5.Name = "pnlTotal5";
-			this.pnlTotal5.Size = new System.Drawing.Size(200, 33);
-			this.pnlTotal5.TabIndex = 0;
-			// 
-			// lblTotal5
-			// 
-			this.lblTotal5.AutoSize = true;
-			this.lblTotal5.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblTotal5.Font = new System.Drawing.Font("メイリオ", 16F, System.Drawing.FontStyle.Bold);
-			this.lblTotal5.ForeColor = System.Drawing.Color.White;
-			this.lblTotal5.Location = new System.Drawing.Point(147, 0);
-			this.lblTotal5.Margin = new System.Windows.Forms.Padding(0);
-			this.lblTotal5.Name = "lblTotal5";
-			this.lblTotal5.Size = new System.Drawing.Size(53, 33);
-			this.lblTotal5.TabIndex = 0;
-			this.lblTotal5.Text = "8.8";
-			this.lblTotal5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// pnlTotal4
-			// 
-			this.pnlTotal4.BackColor = System.Drawing.Color.DarkSeaGreen;
-			this.pnlTotal4.Controls.Add(this.lblTotal4);
-			this.pnlTotal4.Location = new System.Drawing.Point(0, 43);
-			this.pnlTotal4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-			this.pnlTotal4.Name = "pnlTotal4";
-			this.pnlTotal4.Size = new System.Drawing.Size(200, 34);
-			this.pnlTotal4.TabIndex = 1;
-			// 
-			// lblTotal4
-			// 
-			this.lblTotal4.AutoSize = true;
-			this.lblTotal4.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblTotal4.Font = new System.Drawing.Font("メイリオ", 16F, System.Drawing.FontStyle.Bold);
-			this.lblTotal4.ForeColor = System.Drawing.Color.White;
-			this.lblTotal4.Location = new System.Drawing.Point(147, 0);
-			this.lblTotal4.Margin = new System.Windows.Forms.Padding(0);
-			this.lblTotal4.Name = "lblTotal4";
-			this.lblTotal4.Size = new System.Drawing.Size(53, 33);
-			this.lblTotal4.TabIndex = 0;
-			this.lblTotal4.Text = "6.6";
-			// 
-			// pnlCpuScore
-			// 
-			this.pnlCpuScore.BackColor = System.Drawing.Color.Salmon;
-			this.pnlCpuScore.Controls.Add(this.lblCpuScore);
-			this.pnlCpuScore.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pnlCpuScore.Location = new System.Drawing.Point(427, 15);
-			this.pnlCpuScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
-			this.pnlCpuScore.Name = "pnlCpuScore";
-			this.pnlCpuScore.Size = new System.Drawing.Size(200, 35);
-			this.pnlCpuScore.TabIndex = 11;
-			// 
-			// lblCpuScore
-			// 
-			this.lblCpuScore.AutoSize = true;
-			this.lblCpuScore.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblCpuScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
-			this.lblCpuScore.ForeColor = System.Drawing.Color.White;
-			this.lblCpuScore.Location = new System.Drawing.Point(145, 0);
-			this.lblCpuScore.Margin = new System.Windows.Forms.Padding(0);
-			this.lblCpuScore.Name = "lblCpuScore";
-			this.lblCpuScore.Size = new System.Drawing.Size(55, 36);
-			this.lblCpuScore.TabIndex = 0;
-			this.lblCpuScore.Text = "4.4";
-			this.lblCpuScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// pnlMemScore
-			// 
-			this.pnlMemScore.BackColor = System.Drawing.Color.SandyBrown;
-			this.pnlMemScore.Controls.Add(this.lblMemScore);
-			this.pnlMemScore.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pnlMemScore.Location = new System.Drawing.Point(427, 80);
-			this.pnlMemScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
-			this.pnlMemScore.Name = "pnlMemScore";
-			this.pnlMemScore.Size = new System.Drawing.Size(200, 35);
-			this.pnlMemScore.TabIndex = 12;
-			// 
-			// lblMemScore
-			// 
-			this.lblMemScore.AutoSize = true;
-			this.lblMemScore.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblMemScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
-			this.lblMemScore.ForeColor = System.Drawing.Color.White;
-			this.lblMemScore.Location = new System.Drawing.Point(145, 0);
-			this.lblMemScore.Margin = new System.Windows.Forms.Padding(0);
-			this.lblMemScore.Name = "lblMemScore";
-			this.lblMemScore.Size = new System.Drawing.Size(55, 36);
-			this.lblMemScore.TabIndex = 0;
-			this.lblMemScore.Text = "4.4";
-			this.lblMemScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// pnlGfxScore
-			// 
-			this.pnlGfxScore.BackColor = System.Drawing.Color.YellowGreen;
-			this.pnlGfxScore.Controls.Add(this.lblGfxScore);
-			this.pnlGfxScore.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pnlGfxScore.Location = new System.Drawing.Point(427, 145);
-			this.pnlGfxScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
-			this.pnlGfxScore.Name = "pnlGfxScore";
-			this.pnlGfxScore.Size = new System.Drawing.Size(200, 35);
-			this.pnlGfxScore.TabIndex = 13;
-			// 
-			// lblGfxScore
-			// 
-			this.lblGfxScore.AutoSize = true;
-			this.lblGfxScore.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblGfxScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
-			this.lblGfxScore.ForeColor = System.Drawing.Color.White;
-			this.lblGfxScore.Location = new System.Drawing.Point(145, 0);
-			this.lblGfxScore.Margin = new System.Windows.Forms.Padding(0);
-			this.lblGfxScore.Name = "lblGfxScore";
-			this.lblGfxScore.Size = new System.Drawing.Size(55, 36);
-			this.lblGfxScore.TabIndex = 0;
-			this.lblGfxScore.Text = "4.4";
-			this.lblGfxScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// pnlGameScore
-			// 
-			this.pnlGameScore.BackColor = System.Drawing.Color.SkyBlue;
-			this.pnlGameScore.Controls.Add(this.lblGameScore);
-			this.pnlGameScore.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pnlGameScore.Location = new System.Drawing.Point(427, 210);
-			this.pnlGameScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
-			this.pnlGameScore.Name = "pnlGameScore";
-			this.pnlGameScore.Size = new System.Drawing.Size(200, 35);
-			this.pnlGameScore.TabIndex = 14;
-			// 
-			// lblGameScore
-			// 
-			this.lblGameScore.AutoSize = true;
-			this.lblGameScore.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblGameScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
-			this.lblGameScore.ForeColor = System.Drawing.Color.White;
-			this.lblGameScore.Location = new System.Drawing.Point(145, 0);
-			this.lblGameScore.Margin = new System.Windows.Forms.Padding(0);
-			this.lblGameScore.Name = "lblGameScore";
-			this.lblGameScore.Size = new System.Drawing.Size(55, 36);
-			this.lblGameScore.TabIndex = 0;
-			this.lblGameScore.Text = "4.4";
-			this.lblGameScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// pnlDiskScore
-			// 
-			this.pnlDiskScore.BackColor = System.Drawing.Color.MediumSlateBlue;
-			this.pnlDiskScore.Controls.Add(this.lblDiskScore);
-			this.pnlDiskScore.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pnlDiskScore.Location = new System.Drawing.Point(427, 275);
-			this.pnlDiskScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
-			this.pnlDiskScore.Name = "pnlDiskScore";
-			this.pnlDiskScore.Size = new System.Drawing.Size(200, 35);
-			this.pnlDiskScore.TabIndex = 15;
-			// 
-			// lblDiskScore
-			// 
-			this.lblDiskScore.AutoSize = true;
-			this.lblDiskScore.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblDiskScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
-			this.lblDiskScore.ForeColor = System.Drawing.Color.White;
-			this.lblDiskScore.Location = new System.Drawing.Point(145, 0);
-			this.lblDiskScore.Margin = new System.Windows.Forms.Padding(0);
-			this.lblDiskScore.Name = "lblDiskScore";
-			this.lblDiskScore.Size = new System.Drawing.Size(55, 36);
-			this.lblDiskScore.TabIndex = 0;
-			this.lblDiskScore.Text = "4.4";
-			this.lblDiskScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			chartArea8.AxisX.IsReversed = true;
+			chartArea8.AxisX.LabelStyle.Enabled = false;
+			chartArea8.AxisX.MajorGrid.Enabled = false;
+			chartArea8.AxisX.MajorTickMark.Enabled = false;
+			chartArea8.AxisX.Maximum = 1.8D;
+			chartArea8.AxisX.Minimum = 0.2D;
+			chartArea8.AxisY.IsLabelAutoFit = false;
+			chartArea8.AxisY.LabelStyle.Enabled = false;
+			chartArea8.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea8.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea8.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea8.AxisY.MajorTickMark.Enabled = false;
+			chartArea8.AxisY.Maximum = 10D;
+			chartArea8.AxisY.Minimum = 0D;
+			chartArea8.Name = "caCpu";
+			chartArea8.Position.Auto = false;
+			chartArea8.Position.Height = 20F;
+			chartArea8.Position.Width = 100F;
+			chartArea9.AxisX.LabelStyle.Enabled = false;
+			chartArea9.AxisX.MajorGrid.Enabled = false;
+			chartArea9.AxisX.MajorTickMark.Enabled = false;
+			chartArea9.AxisX.Maximum = 1.8D;
+			chartArea9.AxisX.Minimum = 0.2D;
+			chartArea9.AxisY.LabelStyle.Enabled = false;
+			chartArea9.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea9.AxisY.MajorGrid.Interval = 0D;
+			chartArea9.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea9.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea9.AxisY.MajorTickMark.Enabled = false;
+			chartArea9.AxisY.Maximum = 10D;
+			chartArea9.AxisY.Minimum = 0D;
+			chartArea9.Name = "caMem";
+			chartArea9.Position.Auto = false;
+			chartArea9.Position.Height = 20F;
+			chartArea9.Position.Width = 100F;
+			chartArea9.Position.Y = 20F;
+			chartArea10.AxisX.LabelStyle.Enabled = false;
+			chartArea10.AxisX.MajorGrid.Enabled = false;
+			chartArea10.AxisX.MajorTickMark.Enabled = false;
+			chartArea10.AxisX.Maximum = 1.8D;
+			chartArea10.AxisX.Minimum = 0.2D;
+			chartArea10.AxisY.LabelStyle.Enabled = false;
+			chartArea10.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea10.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea10.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea10.AxisY.MajorTickMark.Enabled = false;
+			chartArea10.AxisY.Maximum = 10D;
+			chartArea10.AxisY.Minimum = 0D;
+			chartArea10.Name = "caGfx";
+			chartArea10.Position.Auto = false;
+			chartArea10.Position.Height = 20F;
+			chartArea10.Position.Width = 100F;
+			chartArea10.Position.Y = 40F;
+			chartArea11.AxisX.LabelStyle.Enabled = false;
+			chartArea11.AxisX.MajorGrid.Enabled = false;
+			chartArea11.AxisX.MajorTickMark.Enabled = false;
+			chartArea11.AxisX.Maximum = 1.8D;
+			chartArea11.AxisX.Minimum = 0.2D;
+			chartArea11.AxisY.LabelStyle.Enabled = false;
+			chartArea11.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea11.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea11.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea11.AxisY.MajorTickMark.Enabled = false;
+			chartArea11.AxisY.Maximum = 10D;
+			chartArea11.AxisY.Minimum = 0D;
+			chartArea11.Name = "caGame";
+			chartArea11.Position.Auto = false;
+			chartArea11.Position.Height = 20F;
+			chartArea11.Position.Width = 100F;
+			chartArea11.Position.Y = 60F;
+			chartArea12.AxisX.LabelStyle.Enabled = false;
+			chartArea12.AxisX.MajorGrid.Enabled = false;
+			chartArea12.AxisX.MajorTickMark.Enabled = false;
+			chartArea12.AxisX.Maximum = 1.8D;
+			chartArea12.AxisX.Minimum = 0.2D;
+			chartArea12.AxisY.LabelStyle.Enabled = false;
+			chartArea12.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea12.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea12.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea12.AxisY.MajorTickMark.Enabled = false;
+			chartArea12.AxisY.Maximum = 10D;
+			chartArea12.AxisY.Minimum = 0D;
+			chartArea12.Name = "caDisk";
+			chartArea12.Position.Auto = false;
+			chartArea12.Position.Height = 20F;
+			chartArea12.Position.Width = 100F;
+			chartArea12.Position.Y = 80F;
+			this.elementChart.ChartAreas.Add(chartArea8);
+			this.elementChart.ChartAreas.Add(chartArea9);
+			this.elementChart.ChartAreas.Add(chartArea10);
+			this.elementChart.ChartAreas.Add(chartArea11);
+			this.elementChart.ChartAreas.Add(chartArea12);
+			this.elementChart.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.elementChart.Location = new System.Drawing.Point(430, 3);
+			this.elementChart.Name = "elementChart";
+			this.elementChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+			this.elementChart.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Tomato,
+        System.Drawing.Color.Orange,
+        System.Drawing.Color.YellowGreen,
+        System.Drawing.Color.SkyBlue,
+        System.Drawing.Color.MediumSlateBlue};
+			this.tblSysScore.SetRowSpan(this.elementChart, 5);
+			series10.ChartArea = "caCpu";
+			series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series10.CustomProperties = "BarLabelStyle=Right";
+			series10.Font = new System.Drawing.Font("Meiryo UI", 17F, System.Drawing.FontStyle.Bold);
+			series10.IsValueShownAsLabel = true;
+			series10.LabelForeColor = System.Drawing.Color.White;
+			series10.LabelFormat = "0.0";
+			series10.Name = "serCpu";
+			series10.Points.Add(dataPoint10);
+			series11.ChartArea = "caMem";
+			series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series11.CustomProperties = "BarLabelStyle=Right";
+			series11.Font = new System.Drawing.Font("Meiryo UI", 17F, System.Drawing.FontStyle.Bold);
+			series11.IsValueShownAsLabel = true;
+			series11.LabelForeColor = System.Drawing.Color.White;
+			series11.LabelFormat = "0.0";
+			series11.Name = "serMem";
+			series11.Points.Add(dataPoint11);
+			series12.ChartArea = "caGfx";
+			series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series12.CustomProperties = "BarLabelStyle=Right";
+			series12.Font = new System.Drawing.Font("Meiryo UI", 17F, System.Drawing.FontStyle.Bold);
+			series12.IsValueShownAsLabel = true;
+			series12.LabelForeColor = System.Drawing.Color.White;
+			series12.LabelFormat = "0.0";
+			series12.Name = "serGfx";
+			series12.Points.Add(dataPoint12);
+			series13.ChartArea = "caGame";
+			series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series13.CustomProperties = "BarLabelStyle=Right";
+			series13.Font = new System.Drawing.Font("Meiryo UI", 17F, System.Drawing.FontStyle.Bold);
+			series13.IsValueShownAsLabel = true;
+			series13.LabelForeColor = System.Drawing.Color.White;
+			series13.LabelFormat = "0.0";
+			series13.Name = "serGame";
+			series13.Points.Add(dataPoint13);
+			series14.ChartArea = "caDisk";
+			series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series14.CustomProperties = "BarLabelStyle=Right";
+			series14.Font = new System.Drawing.Font("Meiryo UI", 17F, System.Drawing.FontStyle.Bold);
+			series14.IsValueShownAsLabel = true;
+			series14.LabelForeColor = System.Drawing.Color.White;
+			series14.LabelFormat = "0.0";
+			series14.Name = "serDisk";
+			series14.Points.Add(dataPoint14);
+			this.elementChart.Series.Add(series10);
+			this.elementChart.Series.Add(series11);
+			this.elementChart.Series.Add(series12);
+			this.elementChart.Series.Add(series13);
+			this.elementChart.Series.Add(series14);
+			this.elementChart.Size = new System.Drawing.Size(345, 319);
+			this.elementChart.TabIndex = 17;
+			this.elementChart.Text = "chart1";
 			// 
 			// frmBase
 			// 
@@ -645,21 +669,8 @@
 			this.gbSysScore.ResumeLayout(false);
 			this.tblSysScore.ResumeLayout(false);
 			this.tblSysScore.PerformLayout();
-			this.tblTotal.ResumeLayout(false);
-			this.pnlTotal5.ResumeLayout(false);
-			this.pnlTotal5.PerformLayout();
-			this.pnlTotal4.ResumeLayout(false);
-			this.pnlTotal4.PerformLayout();
-			this.pnlCpuScore.ResumeLayout(false);
-			this.pnlCpuScore.PerformLayout();
-			this.pnlMemScore.ResumeLayout(false);
-			this.pnlMemScore.PerformLayout();
-			this.pnlGfxScore.ResumeLayout(false);
-			this.pnlGfxScore.PerformLayout();
-			this.pnlGameScore.ResumeLayout(false);
-			this.pnlGameScore.PerformLayout();
-			this.pnlDiskScore.ResumeLayout(false);
-			this.pnlDiskScore.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.totalChart)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.elementChart)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -681,32 +692,19 @@
         private System.Windows.Forms.Label lblOSInfo;
         private System.Windows.Forms.Label lblMachineInfo;
         private System.Windows.Forms.GroupBox gbSysScore;
-        private System.Windows.Forms.TableLayoutPanel tblSysScore;
-        private System.Windows.Forms.Label lblCpuInfo;
-        private System.Windows.Forms.Label lblMemInfo;
-        private System.Windows.Forms.Label lblGfxInfo;
-        private System.Windows.Forms.Label lblGameInfo;
-        private System.Windows.Forms.Label lblDiskInfo;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Button btnCpuDetail;
-        private System.Windows.Forms.Button btnMemDetail;
-        private System.Windows.Forms.Button btnGfxDetail;
-        private System.Windows.Forms.Button btnHddDetail;
-        private System.Windows.Forms.TableLayoutPanel tblTotal;
-        private System.Windows.Forms.Panel pnlTotal5;
-        private System.Windows.Forms.Label lblTotal5;
-        private System.Windows.Forms.Panel pnlTotal4;
-        private System.Windows.Forms.Label lblTotal4;
-        private System.Windows.Forms.Panel pnlCpuScore;
-        private System.Windows.Forms.Label lblCpuScore;
-        private System.Windows.Forms.Panel pnlMemScore;
-        private System.Windows.Forms.Label lblMemScore;
-        private System.Windows.Forms.Panel pnlGfxScore;
-        private System.Windows.Forms.Label lblGfxScore;
-        private System.Windows.Forms.Panel pnlGameScore;
-        private System.Windows.Forms.Label lblGameScore;
-        private System.Windows.Forms.Panel pnlDiskScore;
-        private System.Windows.Forms.Label lblDiskScore;
-    }
+		private System.Windows.Forms.TableLayoutPanel tblSysScore;
+		private System.Windows.Forms.Label lblCpuInfo;
+		private System.Windows.Forms.Label lblMemInfo;
+		private System.Windows.Forms.Label lblGfxInfo;
+		private System.Windows.Forms.Label lblGameInfo;
+		private System.Windows.Forms.Label lblDiskInfo;
+		private System.Windows.Forms.Label lblTotal;
+		private System.Windows.Forms.Button btnCpuDetail;
+		private System.Windows.Forms.Button btnMemDetail;
+		private System.Windows.Forms.Button btnGfxDetail;
+		private System.Windows.Forms.Button btnHddDetail;
+		private System.Windows.Forms.DataVisualization.Charting.Chart totalChart;
+		private System.Windows.Forms.DataVisualization.Charting.Chart elementChart;
+	}
 }
 

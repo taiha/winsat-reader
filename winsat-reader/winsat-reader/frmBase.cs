@@ -9,7 +9,6 @@ namespace winsat_reader
 	public partial class frmBase : Form
 	{
 		// Variable
-		double max_score = 9.9;
 		// ref: https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-physicalmemory
 		string[] memform = new string[]{
 			"(unknown)", "(other)", "SIP", "DIP", "ZIP",
@@ -60,20 +59,6 @@ namespace winsat_reader
 			return wmi.Find(x => x.PropName == name).PropValue;
 		}
 
-		// スコア表示バーwidth
-		public int getBarWidth(double tblWidth, float columnWidth, double score)
-		{
-			int barWidth = 0;
-
-			/* Column Width: 45%
-            * width = tableLayoutPanel.width * (Column.width * 0.01) * Score / Max.Score)
-            */
-			barWidth = Convert.ToInt32(tblWidth * (columnWidth * 0.01) * (score / max_score));
-
-			return barWidth;
-
-		}
-
 		private void ResetValueAll()
 		{
 			lblOSInfo.Text = "";
@@ -85,20 +70,12 @@ namespace winsat_reader
 			lblGameInfo.Text = "ゲーム用 グラフィックス\r\n";
 			lblDiskInfo.Text = "プライマリ ディスク\r\n";
 
-			pnlCpuScore.Width = 1;
-			lblCpuScore.Text = "0.0";
-			pnlMemScore.Width = 1;
-			lblMemScore.Text = "0.0";
-			pnlGfxScore.Width = 1;
-			lblGfxScore.Text = "0.0";
-			pnlGameScore.Width = 1;
-			lblGameScore.Text = "0.0";
-			pnlDiskScore.Width = 1;
-			lblDiskScore.Text = "0.0";
-			pnlTotal5.Width = 1;
-			lblTotal5.Text = "0.0";
-			pnlTotal4.Width = 1;
-			lblTotal4.Text = "0.0";
+			for (int i = 0; i < elementChart.Series.Count; i++)
+			{
+				elementChart.Series[i].Points[0].YValues[0] = 0;
+			}
+			totalChart.Series[0].Points[0].YValues[0] =
+				totalChart.Series[1].Points[0].YValues[0] = 0;
 		}
 
 		// システムディスク情報取得
@@ -188,54 +165,22 @@ namespace winsat_reader
 
 		private void SetScoreData()
 		{
-			int width;
-
-			// CPU
+			double scoreTotal5 = 0;
 			double cpuScore = Convert.ToDouble(GetPropValue("CPUScore", wsat_wmi));
-			width = getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, cpuScore);
-
-			pnlCpuScore.Width = width;
-			lblCpuScore.Text = cpuScore.ToString("0.0");
-
-			// Memory
-			double memScore = Convert.ToDouble(GetPropValue("MemoryScore", wsat_wmi));
-			width = getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, memScore);
-
-			pnlMemScore.Width = width;
-			lblMemScore.Text = memScore.ToString("0.0");
-
-			// Graphics
-			double gfxScore = Convert.ToDouble(GetPropValue("GraphicsScore", wsat_wmi));
-			width = getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, gfxScore);
-
-			pnlGfxScore.Width = width;
-			lblGfxScore.Text = gfxScore.ToString("0.0");
-
-			// Game
-			double gameScore = Convert.ToDouble(GetPropValue("D3DScore", wsat_wmi));
-			width = getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, gameScore);
-
-			pnlGameScore.Width = width;
-			lblGameScore.Text = gameScore.ToString("0.0");
-
-			// Primary Disk
-			double diskScore = Convert.ToDouble(GetPropValue("DiskScore", wsat_wmi));
-			width = getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, diskScore);
-
-			pnlDiskScore.Width = width;
-			lblDiskScore.Text = diskScore.ToString("0.0");
-
-			// Average (Total)
-			double scoreTotal5 =
-				cpuScore + memScore + gfxScore + gameScore + diskScore;
+			elementChart.Series["serCpu"].Points[0].YValues = new double[] { cpuScore };
+			scoreTotal5 += cpuScore;
+			scoreTotal5 += elementChart.Series["serMem"].Points[0].YValues[0]
+				= Convert.ToDouble(GetPropValue("MemoryScore", wsat_wmi));
+			scoreTotal5 += elementChart.Series["serGfx"].Points[0].YValues[0]
+				= Convert.ToDouble(GetPropValue("GraphicsScore", wsat_wmi));
 			double scoreTotal4 =
-				cpuScore + memScore + gfxScore + diskScore;
+			scoreTotal5 += elementChart.Series["serGame"].Points[0].YValues[0]
+				= Convert.ToDouble(GetPropValue("D3DScore", wsat_wmi));
+			scoreTotal5 += elementChart.Series["serDisk"].Points[0].YValues[0]
+				= Convert.ToDouble(GetPropValue("DiskScore", wsat_wmi));
 
-			pnlTotal5.Width = Convert.ToInt32(tblTotal.Width * (scoreTotal5 / (max_score * 5)));
-			pnlTotal4.Width = Convert.ToInt32(tblTotal.Width * (scoreTotal4 / (max_score * 5)));
-
-			lblTotal5.Text = scoreTotal5.ToString("0.0");
-			lblTotal4.Text = scoreTotal4.ToString("0.0");
+			totalChart.Series[0].Points[0].YValues = new double[] { scoreTotal5 };
+			totalChart.Series[1].Points[0].YValues = new double[] { scoreTotal4 };
 		}
 
 		private int ChkWinsatAvailability(ref string err, bool isload)
@@ -301,7 +246,14 @@ namespace winsat_reader
 
 			// for Windows 7
 			if (Environment.OSVersion.Version < new Version(6, 2))
-				max_score = 5.9;
+			{
+				for (int i = 0; i < elementChart.ChartAreas.Count; i++)
+				{
+					elementChart.ChartAreas[i].AxisY.Maximum = 6;
+					elementChart.ChartAreas[i].AxisY.MajorGrid.Interval = 1;
+				}
+				totalChart.ChartAreas[0].AxisY.Maximum = 29.5;
+			}
 
 			ResetValueAll();
 			SetSysInfo();
