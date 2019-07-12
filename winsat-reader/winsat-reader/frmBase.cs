@@ -85,20 +85,10 @@ namespace winsat_reader
 			lblGameInfo.Text = "ゲーム用 グラフィックス\r\n";
 			lblDiskInfo.Text = "プライマリ ディスク\r\n";
 
-			pnlCpuScore.Width = 1;
-			lblCpuScore.Text = "0.0";
-			pnlMemScore.Width = 1;
-			lblMemScore.Text = "0.0";
-			pnlGfxScore.Width = 1;
-			lblGfxScore.Text = "0.0";
-			pnlGameScore.Width = 1;
-			lblGameScore.Text = "0.0";
-			pnlDiskScore.Width = 1;
-			lblDiskScore.Text = "0.0";
-			pnlTotal5.Width = 1;
-			lblTotal5.Text = "0.0";
-			pnlTotal4.Width = 1;
-			lblTotal4.Text = "0.0";
+			for (int i = 0; i < elementChart.Series.Count; i++)
+			{
+				elementChart.Series[i].Points[0].YValues[0] = 0;
+			}
 		}
 
 		// システムディスク情報取得
@@ -133,13 +123,13 @@ namespace winsat_reader
 
 		private void SetSysInfo()
 		{
-			// OS
+			//	// OS
 			lblOSInfo.Text = string.Format("{0} {1} ({2})",
 				GetPropValue("Caption", os_wmi).ToString(),
 				GetPropValue("OSArchitecture", os_wmi).ToString(),
 				GetPropValue("Version", os_wmi).ToString());
 
-			// PC(or MB)
+			//	// PC(or MB)
 			if (GetPropValue("Manufacturer", cs_wmi).ToString().ToLower() == "to be filled by o.e.m.")
 				lblMachineInfo.Text = string.Format("{0}  {1}",
 					GetPropValue("Manufacturer", bb_wmi).ToString(),
@@ -149,10 +139,10 @@ namespace winsat_reader
 					GetPropValue("Manufacturer", cs_wmi).ToString(),
 					GetPropValue("Model", cs_wmi).ToString());
 
-			// CPU
+			//	// CPU
 			lblCpuInfo.Text += GetPropValue("Name", proc_wmi).ToString();
 
-			// Memory
+			//	// Memory
 			long totalMem = 0;
 			foreach (WmiStore wmi in pm_wmi)
 			{
@@ -167,17 +157,17 @@ namespace winsat_reader
 				memform[Convert.ToInt32(GetPropValue("FormFactor", pm_wmi))],
 				(totalMem / (1024 * 1024 * 1024)).ToString("0.00"));
 
-			// Graphics
+			//	// Graphics
 			lblGfxInfo.Text += string.Format("{0}  VRAM: {1}",
 				GetPropValue("Caption", vc_wmi).ToString(),
 				(Convert.ToInt64(GetPropValue("AdapterRAM", vc_wmi)) / (1024 * 1024 * 1024)).ToString("0.00") + "GB");
 
-			// GameGraphics
+			//	// GameGraphics
 			object reg = null;
 			if (GetHKLMRegVal(@"SOFTWARE\Microsoft\DirectX", "MaxFeatureLevel", ref reg) == 0)
 				lblGameInfo.Text += string.Format("DirectX {0} (Feature Level)", CalcDXVer(Convert.ToUInt32(reg)));
 
-			// Primary Disk
+			//	// Primary Disk
 			object[] diskInfo = getSysDiskInfo();
 			lblDiskInfo.Text += string.Format("{0}  {1}",
 				diskInfo[0].ToString(),
@@ -194,36 +184,36 @@ namespace winsat_reader
 			double cpuScore = Convert.ToDouble(GetPropValue("CPUScore", wsat_wmi));
 			width = getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, cpuScore);
 
-			pnlCpuScore.Width = width;
-			lblCpuScore.Text = cpuScore.ToString("0.0");
+			//pnlCpuScore.Width = width;
+			//lblCpuScore.Text = cpuScore.ToString("0.0");
 
 			// Memory
 			double memScore = Convert.ToDouble(GetPropValue("MemoryScore", wsat_wmi));
 			width = getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, memScore);
 
-			pnlMemScore.Width = width;
-			lblMemScore.Text = memScore.ToString("0.0");
+			//pnlMemScore.Width = width;
+			//lblMemScore.Text = memScore.ToString("0.0");
 
 			// Graphics
 			double gfxScore = Convert.ToDouble(GetPropValue("GraphicsScore", wsat_wmi));
 			width = getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, gfxScore);
 
-			pnlGfxScore.Width = width;
-			lblGfxScore.Text = gfxScore.ToString("0.0");
+			//pnlGfxScore.Width = width;
+			//lblGfxScore.Text = gfxScore.ToString("0.0");
 
 			// Game
 			double gameScore = Convert.ToDouble(GetPropValue("D3DScore", wsat_wmi));
 			width = getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, gameScore);
 
-			pnlGameScore.Width = width;
-			lblGameScore.Text = gameScore.ToString("0.0");
+			//pnlGameScore.Width = width;
+			//lblGameScore.Text = gameScore.ToString("0.0");
 
 			// Primary Disk
 			double diskScore = Convert.ToDouble(GetPropValue("DiskScore", wsat_wmi));
 			width = getBarWidth(tblSysScore.Width, tblSysScore.ColumnStyles[2].Width, diskScore);
 
-			pnlDiskScore.Width = width;
-			lblDiskScore.Text = diskScore.ToString("0.0");
+			//pnlDiskScore.Width = width;
+			//lblDiskScore.Text = diskScore.ToString("0.0");
 
 			// Average (Total)
 			double scoreTotal5 =
@@ -231,11 +221,11 @@ namespace winsat_reader
 			double scoreTotal4 =
 				cpuScore + memScore + gfxScore + diskScore;
 
-			pnlTotal5.Width = Convert.ToInt32(tblTotal.Width * (scoreTotal5 / (max_score * 5)));
-			pnlTotal4.Width = Convert.ToInt32(tblTotal.Width * (scoreTotal4 / (max_score * 5)));
+			//pnlTotal5.Width = Convert.ToInt32(tblTotal.Width * (scoreTotal5 / (max_score * 5)));
+			//pnlTotal4.Width = Convert.ToInt32(tblTotal.Width * (scoreTotal4 / (max_score * 5)));
 
-			lblTotal5.Text = scoreTotal5.ToString("0.0");
-			lblTotal4.Text = scoreTotal4.ToString("0.0");
+			//lblTotal5.Text = scoreTotal5.ToString("0.0");
+			//lblTotal4.Text = scoreTotal4.ToString("0.0");
 		}
 
 		private int ChkWinsatAvailability(ref string err, bool isload)

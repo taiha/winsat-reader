@@ -29,6 +29,25 @@
         private void InitializeComponent()
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBase));
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 5.6D);
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 42.3D);
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 5.9D);
+			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 3.2D);
+			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 8.3D);
+			System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 2.1D);
+			System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 9.9D);
 			this.tsMain = new System.Windows.Forms.ToolStrip();
 			this.tsExit = new System.Windows.Forms.ToolStripButton();
 			this.tsddEvaluation = new System.Windows.Forms.ToolStripDropDownButton();
@@ -44,44 +63,25 @@
 			this.lblMachineInfo = new System.Windows.Forms.Label();
 			this.gbSysScore = new System.Windows.Forms.GroupBox();
 			this.tblSysScore = new System.Windows.Forms.TableLayoutPanel();
-			this.lblCpuInfo = new System.Windows.Forms.Label();
-			this.lblMemInfo = new System.Windows.Forms.Label();
-			this.lblGfxInfo = new System.Windows.Forms.Label();
-			this.lblGameInfo = new System.Windows.Forms.Label();
-			this.lblDiskInfo = new System.Windows.Forms.Label();
+			this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.lblTotal = new System.Windows.Forms.Label();
-			this.btnCpuDetail = new System.Windows.Forms.Button();
-			this.btnMemDetail = new System.Windows.Forms.Button();
-			this.btnGfxDetail = new System.Windows.Forms.Button();
 			this.btnHddDetail = new System.Windows.Forms.Button();
-			this.tblTotal = new System.Windows.Forms.TableLayoutPanel();
-			this.pnlTotal5 = new System.Windows.Forms.Panel();
-			this.lblTotal5 = new System.Windows.Forms.Label();
-			this.pnlTotal4 = new System.Windows.Forms.Panel();
-			this.lblTotal4 = new System.Windows.Forms.Label();
-			this.pnlCpuScore = new System.Windows.Forms.Panel();
-			this.lblCpuScore = new System.Windows.Forms.Label();
-			this.pnlMemScore = new System.Windows.Forms.Panel();
-			this.lblMemScore = new System.Windows.Forms.Label();
-			this.pnlGfxScore = new System.Windows.Forms.Panel();
-			this.lblGfxScore = new System.Windows.Forms.Label();
-			this.pnlGameScore = new System.Windows.Forms.Panel();
-			this.lblGameScore = new System.Windows.Forms.Label();
-			this.pnlDiskScore = new System.Windows.Forms.Panel();
-			this.lblDiskScore = new System.Windows.Forms.Label();
+			this.btnGfxDetail = new System.Windows.Forms.Button();
+			this.btnMemDetail = new System.Windows.Forms.Button();
+			this.btnCpuDetail = new System.Windows.Forms.Button();
+			this.lblDiskInfo = new System.Windows.Forms.Label();
+			this.lblGameInfo = new System.Windows.Forms.Label();
+			this.lblGfxInfo = new System.Windows.Forms.Label();
+			this.lblMemInfo = new System.Windows.Forms.Label();
+			this.lblCpuInfo = new System.Windows.Forms.Label();
+			this.elementChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.tsMain.SuspendLayout();
 			this.gbSysSummery.SuspendLayout();
 			this.tblSysSummery.SuspendLayout();
 			this.gbSysScore.SuspendLayout();
 			this.tblSysScore.SuspendLayout();
-			this.tblTotal.SuspendLayout();
-			this.pnlTotal5.SuspendLayout();
-			this.pnlTotal4.SuspendLayout();
-			this.pnlCpuScore.SuspendLayout();
-			this.pnlMemScore.SuspendLayout();
-			this.pnlGfxScore.SuspendLayout();
-			this.pnlGameScore.SuspendLayout();
-			this.pnlDiskScore.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.elementChart)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tsMain
@@ -266,12 +266,8 @@
 			this.tblSysScore.Controls.Add(this.btnMemDetail, 0, 1);
 			this.tblSysScore.Controls.Add(this.btnGfxDetail, 0, 2);
 			this.tblSysScore.Controls.Add(this.btnHddDetail, 0, 4);
-			this.tblSysScore.Controls.Add(this.tblTotal, 2, 5);
-			this.tblSysScore.Controls.Add(this.pnlCpuScore, 2, 0);
-			this.tblSysScore.Controls.Add(this.pnlMemScore, 2, 1);
-			this.tblSysScore.Controls.Add(this.pnlGfxScore, 2, 2);
-			this.tblSysScore.Controls.Add(this.pnlGameScore, 2, 3);
-			this.tblSysScore.Controls.Add(this.pnlDiskScore, 2, 4);
+			this.tblSysScore.Controls.Add(this.chart6, 2, 5);
+			this.tblSysScore.Controls.Add(this.elementChart, 2, 0);
 			this.tblSysScore.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tblSysScore.Location = new System.Drawing.Point(3, 21);
 			this.tblSysScore.Name = "tblSysScore";
@@ -285,73 +281,111 @@
 			this.tblSysScore.Size = new System.Drawing.Size(778, 412);
 			this.tblSysScore.TabIndex = 0;
 			// 
-			// lblCpuInfo
+			// chart6
 			// 
-			this.lblCpuInfo.AutoSize = true;
-			this.lblCpuInfo.BackColor = System.Drawing.Color.White;
-			this.lblCpuInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lblCpuInfo.Font = new System.Drawing.Font("メイリオ", 10F);
-			this.lblCpuInfo.Image = global::winsat_reader.resImg.label54;
-			this.lblCpuInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.lblCpuInfo.Location = new System.Drawing.Point(77, 2);
-			this.lblCpuInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			this.lblCpuInfo.Name = "lblCpuInfo";
-			this.lblCpuInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-			this.lblCpuInfo.Size = new System.Drawing.Size(350, 61);
-			this.lblCpuInfo.TabIndex = 0;
-			this.lblCpuInfo.Text = "CPU";
-			this.lblCpuInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			chartArea1.AxisX.LabelStyle.Enabled = false;
+			chartArea1.AxisX.MajorGrid.Enabled = false;
+			chartArea1.AxisX.MajorTickMark.Enabled = false;
+			chartArea1.AxisX.Maximum = 3D;
+			chartArea1.AxisX.Minimum = 0D;
+			chartArea1.AxisY.LabelStyle.Enabled = false;
+			chartArea1.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea1.AxisY.MajorGrid.Interval = 10D;
+			chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea1.AxisY.MajorTickMark.Enabled = false;
+			chartArea1.AxisY.Maximum = 49.5D;
+			chartArea1.AxisY.Minimum = 0D;
+			chartArea1.AxisY.MinorGrid.Enabled = true;
+			chartArea1.AxisY.MinorGrid.Interval = 10D;
+			chartArea1.AxisY.MinorGrid.IntervalOffset = 5D;
+			chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.Silver;
+			chartArea1.AxisY.MinorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+			chartArea1.Name = "ChartArea1";
+			chartArea1.Position.Auto = false;
+			chartArea1.Position.Height = 100F;
+			chartArea1.Position.Width = 100F;
+			this.chart6.ChartAreas.Add(chartArea1);
+			this.chart6.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.chart6.Location = new System.Drawing.Point(430, 328);
+			this.chart6.Name = "chart6";
+			this.chart6.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+			series1.ChartArea = "ChartArea1";
+			series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series1.Font = new System.Drawing.Font("游ゴシック", 14F, System.Drawing.FontStyle.Bold);
+			series1.IsValueShownAsLabel = true;
+			series1.Name = "Series1";
+			series1.Points.Add(dataPoint1);
+			series1.Points.Add(dataPoint2);
+			series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+			series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+			this.chart6.Series.Add(series1);
+			this.chart6.Size = new System.Drawing.Size(345, 81);
+			this.chart6.TabIndex = 16;
+			this.chart6.Text = "chart6";
 			// 
-			// lblMemInfo
+			// lblTotal
 			// 
-			this.lblMemInfo.AutoSize = true;
-			this.lblMemInfo.BackColor = System.Drawing.Color.White;
-			this.lblMemInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lblMemInfo.Font = new System.Drawing.Font("メイリオ", 10F);
-			this.lblMemInfo.Image = global::winsat_reader.resImg.label54;
-			this.lblMemInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.lblMemInfo.Location = new System.Drawing.Point(77, 67);
-			this.lblMemInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			this.lblMemInfo.Name = "lblMemInfo";
-			this.lblMemInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-			this.lblMemInfo.Size = new System.Drawing.Size(350, 61);
-			this.lblMemInfo.TabIndex = 1;
-			this.lblMemInfo.Text = "メモリ (RAM)";
-			this.lblMemInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblTotal.AutoSize = true;
+			this.lblTotal.BackColor = System.Drawing.Color.White;
+			this.lblTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblTotal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.lblTotal.Font = new System.Drawing.Font("メイリオ", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+			this.lblTotal.Location = new System.Drawing.Point(77, 327);
+			this.lblTotal.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.lblTotal.Name = "lblTotal";
+			this.lblTotal.Size = new System.Drawing.Size(350, 83);
+			this.lblTotal.TabIndex = 5;
+			this.lblTotal.Text = "総合\r\n（合計）";
+			this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// lblGfxInfo
+			// btnHddDetail
 			// 
-			this.lblGfxInfo.AutoSize = true;
-			this.lblGfxInfo.BackColor = System.Drawing.Color.White;
-			this.lblGfxInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lblGfxInfo.Font = new System.Drawing.Font("メイリオ", 10F);
-			this.lblGfxInfo.Image = global::winsat_reader.resImg.label54;
-			this.lblGfxInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.lblGfxInfo.Location = new System.Drawing.Point(77, 132);
-			this.lblGfxInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			this.lblGfxInfo.Name = "lblGfxInfo";
-			this.lblGfxInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-			this.lblGfxInfo.Size = new System.Drawing.Size(350, 61);
-			this.lblGfxInfo.TabIndex = 2;
-			this.lblGfxInfo.Text = "グラフィックス";
-			this.lblGfxInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.btnHddDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnHddDetail.Enabled = false;
+			this.btnHddDetail.Image = global::winsat_reader.resImg.hdd40;
+			this.btnHddDetail.Location = new System.Drawing.Point(3, 263);
+			this.btnHddDetail.Name = "btnHddDetail";
+			this.btnHddDetail.Size = new System.Drawing.Size(71, 59);
+			this.btnHddDetail.TabIndex = 9;
+			this.btnHddDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnHddDetail.UseVisualStyleBackColor = true;
 			// 
-			// lblGameInfo
+			// btnGfxDetail
 			// 
-			this.lblGameInfo.AutoSize = true;
-			this.lblGameInfo.BackColor = System.Drawing.Color.White;
-			this.lblGameInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lblGameInfo.Font = new System.Drawing.Font("メイリオ", 10F);
-			this.lblGameInfo.Image = global::winsat_reader.resImg.label5;
-			this.lblGameInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.lblGameInfo.Location = new System.Drawing.Point(77, 197);
-			this.lblGameInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			this.lblGameInfo.Name = "lblGameInfo";
-			this.lblGameInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-			this.lblGameInfo.Size = new System.Drawing.Size(350, 61);
-			this.lblGameInfo.TabIndex = 3;
-			this.lblGameInfo.Text = "ゲーム用 グラフィックス";
-			this.lblGameInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.btnGfxDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnGfxDetail.Enabled = false;
+			this.btnGfxDetail.Image = global::winsat_reader.resImg.display60;
+			this.btnGfxDetail.Location = new System.Drawing.Point(3, 133);
+			this.btnGfxDetail.Name = "btnGfxDetail";
+			this.btnGfxDetail.Size = new System.Drawing.Size(71, 59);
+			this.btnGfxDetail.TabIndex = 8;
+			this.btnGfxDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnGfxDetail.UseVisualStyleBackColor = true;
+			// 
+			// btnMemDetail
+			// 
+			this.btnMemDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnMemDetail.Enabled = false;
+			this.btnMemDetail.Image = global::winsat_reader.resImg.mem60;
+			this.btnMemDetail.Location = new System.Drawing.Point(3, 68);
+			this.btnMemDetail.Name = "btnMemDetail";
+			this.btnMemDetail.Size = new System.Drawing.Size(71, 59);
+			this.btnMemDetail.TabIndex = 7;
+			this.btnMemDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnMemDetail.UseVisualStyleBackColor = true;
+			// 
+			// btnCpuDetail
+			// 
+			this.btnCpuDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnCpuDetail.Enabled = false;
+			this.btnCpuDetail.Image = global::winsat_reader.resImg.cpu60;
+			this.btnCpuDetail.Location = new System.Drawing.Point(3, 3);
+			this.btnCpuDetail.Name = "btnCpuDetail";
+			this.btnCpuDetail.Size = new System.Drawing.Size(71, 59);
+			this.btnCpuDetail.TabIndex = 6;
+			this.btnCpuDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnCpuDetail.UseVisualStyleBackColor = true;
 			// 
 			// lblDiskInfo
 			// 
@@ -370,258 +404,218 @@
 			this.lblDiskInfo.Text = "プライマリ ディスク";
 			this.lblDiskInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// lblTotal
+			// lblGameInfo
 			// 
-			this.lblTotal.AutoSize = true;
-			this.lblTotal.BackColor = System.Drawing.Color.White;
-			this.lblTotal.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lblTotal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.lblTotal.Font = new System.Drawing.Font("メイリオ", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-			this.lblTotal.Location = new System.Drawing.Point(77, 327);
-			this.lblTotal.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-			this.lblTotal.Name = "lblTotal";
-			this.lblTotal.Size = new System.Drawing.Size(350, 83);
-			this.lblTotal.TabIndex = 5;
-			this.lblTotal.Text = "総合\r\n（合計）";
-			this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblGameInfo.AutoSize = true;
+			this.lblGameInfo.BackColor = System.Drawing.Color.White;
+			this.lblGameInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblGameInfo.Font = new System.Drawing.Font("メイリオ", 10F);
+			this.lblGameInfo.Image = global::winsat_reader.resImg.label5;
+			this.lblGameInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.lblGameInfo.Location = new System.Drawing.Point(77, 197);
+			this.lblGameInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.lblGameInfo.Name = "lblGameInfo";
+			this.lblGameInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+			this.lblGameInfo.Size = new System.Drawing.Size(350, 61);
+			this.lblGameInfo.TabIndex = 3;
+			this.lblGameInfo.Text = "ゲーム用 グラフィックス";
+			this.lblGameInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// btnCpuDetail
+			// lblGfxInfo
 			// 
-			this.btnCpuDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btnCpuDetail.Enabled = false;
-			this.btnCpuDetail.Image = global::winsat_reader.resImg.cpu60;
-			this.btnCpuDetail.Location = new System.Drawing.Point(3, 3);
-			this.btnCpuDetail.Name = "btnCpuDetail";
-			this.btnCpuDetail.Size = new System.Drawing.Size(71, 59);
-			this.btnCpuDetail.TabIndex = 6;
-			this.btnCpuDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnCpuDetail.UseVisualStyleBackColor = true;
+			this.lblGfxInfo.AutoSize = true;
+			this.lblGfxInfo.BackColor = System.Drawing.Color.White;
+			this.lblGfxInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblGfxInfo.Font = new System.Drawing.Font("メイリオ", 10F);
+			this.lblGfxInfo.Image = global::winsat_reader.resImg.label54;
+			this.lblGfxInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.lblGfxInfo.Location = new System.Drawing.Point(77, 132);
+			this.lblGfxInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.lblGfxInfo.Name = "lblGfxInfo";
+			this.lblGfxInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+			this.lblGfxInfo.Size = new System.Drawing.Size(350, 61);
+			this.lblGfxInfo.TabIndex = 2;
+			this.lblGfxInfo.Text = "グラフィックス";
+			this.lblGfxInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// btnMemDetail
+			// lblMemInfo
 			// 
-			this.btnMemDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btnMemDetail.Enabled = false;
-			this.btnMemDetail.Image = global::winsat_reader.resImg.mem60;
-			this.btnMemDetail.Location = new System.Drawing.Point(3, 68);
-			this.btnMemDetail.Name = "btnMemDetail";
-			this.btnMemDetail.Size = new System.Drawing.Size(71, 59);
-			this.btnMemDetail.TabIndex = 7;
-			this.btnMemDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnMemDetail.UseVisualStyleBackColor = true;
+			this.lblMemInfo.AutoSize = true;
+			this.lblMemInfo.BackColor = System.Drawing.Color.White;
+			this.lblMemInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblMemInfo.Font = new System.Drawing.Font("メイリオ", 10F);
+			this.lblMemInfo.Image = global::winsat_reader.resImg.label54;
+			this.lblMemInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.lblMemInfo.Location = new System.Drawing.Point(77, 67);
+			this.lblMemInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.lblMemInfo.Name = "lblMemInfo";
+			this.lblMemInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+			this.lblMemInfo.Size = new System.Drawing.Size(350, 61);
+			this.lblMemInfo.TabIndex = 1;
+			this.lblMemInfo.Text = "メモリ (RAM)";
+			this.lblMemInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// btnGfxDetail
+			// lblCpuInfo
 			// 
-			this.btnGfxDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btnGfxDetail.Enabled = false;
-			this.btnGfxDetail.Image = global::winsat_reader.resImg.display60;
-			this.btnGfxDetail.Location = new System.Drawing.Point(3, 133);
-			this.btnGfxDetail.Name = "btnGfxDetail";
-			this.btnGfxDetail.Size = new System.Drawing.Size(71, 59);
-			this.btnGfxDetail.TabIndex = 8;
-			this.btnGfxDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnGfxDetail.UseVisualStyleBackColor = true;
+			this.lblCpuInfo.AutoSize = true;
+			this.lblCpuInfo.BackColor = System.Drawing.Color.White;
+			this.lblCpuInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblCpuInfo.Font = new System.Drawing.Font("メイリオ", 10F);
+			this.lblCpuInfo.Image = global::winsat_reader.resImg.label54;
+			this.lblCpuInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.lblCpuInfo.Location = new System.Drawing.Point(77, 2);
+			this.lblCpuInfo.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+			this.lblCpuInfo.Name = "lblCpuInfo";
+			this.lblCpuInfo.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+			this.lblCpuInfo.Size = new System.Drawing.Size(350, 61);
+			this.lblCpuInfo.TabIndex = 0;
+			this.lblCpuInfo.Text = "CPU";
+			this.lblCpuInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// btnHddDetail
+			// elementChart
 			// 
-			this.btnHddDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btnHddDetail.Enabled = false;
-			this.btnHddDetail.Image = global::winsat_reader.resImg.hdd40;
-			this.btnHddDetail.Location = new System.Drawing.Point(3, 263);
-			this.btnHddDetail.Name = "btnHddDetail";
-			this.btnHddDetail.Size = new System.Drawing.Size(71, 59);
-			this.btnHddDetail.TabIndex = 9;
-			this.btnHddDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnHddDetail.UseVisualStyleBackColor = true;
-			// 
-			// tblTotal
-			// 
-			this.tblTotal.ColumnCount = 1;
-			this.tblTotal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tblTotal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tblTotal.Controls.Add(this.pnlTotal5, 0, 0);
-			this.tblTotal.Controls.Add(this.pnlTotal4, 0, 1);
-			this.tblTotal.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tblTotal.Location = new System.Drawing.Point(427, 325);
-			this.tblTotal.Margin = new System.Windows.Forms.Padding(0);
-			this.tblTotal.Name = "tblTotal";
-			this.tblTotal.RowCount = 2;
-			this.tblTotal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tblTotal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tblTotal.Size = new System.Drawing.Size(351, 87);
-			this.tblTotal.TabIndex = 10;
-			// 
-			// pnlTotal5
-			// 
-			this.pnlTotal5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.pnlTotal5.BackColor = System.Drawing.Color.MediumAquamarine;
-			this.pnlTotal5.Controls.Add(this.lblTotal5);
-			this.pnlTotal5.Location = new System.Drawing.Point(0, 10);
-			this.pnlTotal5.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-			this.pnlTotal5.Name = "pnlTotal5";
-			this.pnlTotal5.Size = new System.Drawing.Size(200, 33);
-			this.pnlTotal5.TabIndex = 0;
-			// 
-			// lblTotal5
-			// 
-			this.lblTotal5.AutoSize = true;
-			this.lblTotal5.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblTotal5.Font = new System.Drawing.Font("メイリオ", 16F, System.Drawing.FontStyle.Bold);
-			this.lblTotal5.ForeColor = System.Drawing.Color.White;
-			this.lblTotal5.Location = new System.Drawing.Point(147, 0);
-			this.lblTotal5.Margin = new System.Windows.Forms.Padding(0);
-			this.lblTotal5.Name = "lblTotal5";
-			this.lblTotal5.Size = new System.Drawing.Size(53, 33);
-			this.lblTotal5.TabIndex = 0;
-			this.lblTotal5.Text = "8.8";
-			this.lblTotal5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// pnlTotal4
-			// 
-			this.pnlTotal4.BackColor = System.Drawing.Color.DarkSeaGreen;
-			this.pnlTotal4.Controls.Add(this.lblTotal4);
-			this.pnlTotal4.Location = new System.Drawing.Point(0, 43);
-			this.pnlTotal4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-			this.pnlTotal4.Name = "pnlTotal4";
-			this.pnlTotal4.Size = new System.Drawing.Size(200, 34);
-			this.pnlTotal4.TabIndex = 1;
-			// 
-			// lblTotal4
-			// 
-			this.lblTotal4.AutoSize = true;
-			this.lblTotal4.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblTotal4.Font = new System.Drawing.Font("メイリオ", 16F, System.Drawing.FontStyle.Bold);
-			this.lblTotal4.ForeColor = System.Drawing.Color.White;
-			this.lblTotal4.Location = new System.Drawing.Point(147, 0);
-			this.lblTotal4.Margin = new System.Windows.Forms.Padding(0);
-			this.lblTotal4.Name = "lblTotal4";
-			this.lblTotal4.Size = new System.Drawing.Size(53, 33);
-			this.lblTotal4.TabIndex = 0;
-			this.lblTotal4.Text = "6.6";
-			// 
-			// pnlCpuScore
-			// 
-			this.pnlCpuScore.BackColor = System.Drawing.Color.Salmon;
-			this.pnlCpuScore.Controls.Add(this.lblCpuScore);
-			this.pnlCpuScore.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pnlCpuScore.Location = new System.Drawing.Point(427, 15);
-			this.pnlCpuScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
-			this.pnlCpuScore.Name = "pnlCpuScore";
-			this.pnlCpuScore.Size = new System.Drawing.Size(200, 35);
-			this.pnlCpuScore.TabIndex = 11;
-			// 
-			// lblCpuScore
-			// 
-			this.lblCpuScore.AutoSize = true;
-			this.lblCpuScore.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblCpuScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
-			this.lblCpuScore.ForeColor = System.Drawing.Color.White;
-			this.lblCpuScore.Location = new System.Drawing.Point(145, 0);
-			this.lblCpuScore.Margin = new System.Windows.Forms.Padding(0);
-			this.lblCpuScore.Name = "lblCpuScore";
-			this.lblCpuScore.Size = new System.Drawing.Size(55, 36);
-			this.lblCpuScore.TabIndex = 0;
-			this.lblCpuScore.Text = "4.4";
-			this.lblCpuScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// pnlMemScore
-			// 
-			this.pnlMemScore.BackColor = System.Drawing.Color.SandyBrown;
-			this.pnlMemScore.Controls.Add(this.lblMemScore);
-			this.pnlMemScore.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pnlMemScore.Location = new System.Drawing.Point(427, 80);
-			this.pnlMemScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
-			this.pnlMemScore.Name = "pnlMemScore";
-			this.pnlMemScore.Size = new System.Drawing.Size(200, 35);
-			this.pnlMemScore.TabIndex = 12;
-			// 
-			// lblMemScore
-			// 
-			this.lblMemScore.AutoSize = true;
-			this.lblMemScore.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblMemScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
-			this.lblMemScore.ForeColor = System.Drawing.Color.White;
-			this.lblMemScore.Location = new System.Drawing.Point(145, 0);
-			this.lblMemScore.Margin = new System.Windows.Forms.Padding(0);
-			this.lblMemScore.Name = "lblMemScore";
-			this.lblMemScore.Size = new System.Drawing.Size(55, 36);
-			this.lblMemScore.TabIndex = 0;
-			this.lblMemScore.Text = "4.4";
-			this.lblMemScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// pnlGfxScore
-			// 
-			this.pnlGfxScore.BackColor = System.Drawing.Color.YellowGreen;
-			this.pnlGfxScore.Controls.Add(this.lblGfxScore);
-			this.pnlGfxScore.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pnlGfxScore.Location = new System.Drawing.Point(427, 145);
-			this.pnlGfxScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
-			this.pnlGfxScore.Name = "pnlGfxScore";
-			this.pnlGfxScore.Size = new System.Drawing.Size(200, 35);
-			this.pnlGfxScore.TabIndex = 13;
-			// 
-			// lblGfxScore
-			// 
-			this.lblGfxScore.AutoSize = true;
-			this.lblGfxScore.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblGfxScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
-			this.lblGfxScore.ForeColor = System.Drawing.Color.White;
-			this.lblGfxScore.Location = new System.Drawing.Point(145, 0);
-			this.lblGfxScore.Margin = new System.Windows.Forms.Padding(0);
-			this.lblGfxScore.Name = "lblGfxScore";
-			this.lblGfxScore.Size = new System.Drawing.Size(55, 36);
-			this.lblGfxScore.TabIndex = 0;
-			this.lblGfxScore.Text = "4.4";
-			this.lblGfxScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// pnlGameScore
-			// 
-			this.pnlGameScore.BackColor = System.Drawing.Color.SkyBlue;
-			this.pnlGameScore.Controls.Add(this.lblGameScore);
-			this.pnlGameScore.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pnlGameScore.Location = new System.Drawing.Point(427, 210);
-			this.pnlGameScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
-			this.pnlGameScore.Name = "pnlGameScore";
-			this.pnlGameScore.Size = new System.Drawing.Size(200, 35);
-			this.pnlGameScore.TabIndex = 14;
-			// 
-			// lblGameScore
-			// 
-			this.lblGameScore.AutoSize = true;
-			this.lblGameScore.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblGameScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
-			this.lblGameScore.ForeColor = System.Drawing.Color.White;
-			this.lblGameScore.Location = new System.Drawing.Point(145, 0);
-			this.lblGameScore.Margin = new System.Windows.Forms.Padding(0);
-			this.lblGameScore.Name = "lblGameScore";
-			this.lblGameScore.Size = new System.Drawing.Size(55, 36);
-			this.lblGameScore.TabIndex = 0;
-			this.lblGameScore.Text = "4.4";
-			this.lblGameScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// pnlDiskScore
-			// 
-			this.pnlDiskScore.BackColor = System.Drawing.Color.MediumSlateBlue;
-			this.pnlDiskScore.Controls.Add(this.lblDiskScore);
-			this.pnlDiskScore.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pnlDiskScore.Location = new System.Drawing.Point(427, 275);
-			this.pnlDiskScore.Margin = new System.Windows.Forms.Padding(0, 15, 0, 15);
-			this.pnlDiskScore.Name = "pnlDiskScore";
-			this.pnlDiskScore.Size = new System.Drawing.Size(200, 35);
-			this.pnlDiskScore.TabIndex = 15;
-			// 
-			// lblDiskScore
-			// 
-			this.lblDiskScore.AutoSize = true;
-			this.lblDiskScore.Dock = System.Windows.Forms.DockStyle.Right;
-			this.lblDiskScore.Font = new System.Drawing.Font("メイリオ", 18F, System.Drawing.FontStyle.Bold);
-			this.lblDiskScore.ForeColor = System.Drawing.Color.White;
-			this.lblDiskScore.Location = new System.Drawing.Point(145, 0);
-			this.lblDiskScore.Margin = new System.Windows.Forms.Padding(0);
-			this.lblDiskScore.Name = "lblDiskScore";
-			this.lblDiskScore.Size = new System.Drawing.Size(55, 36);
-			this.lblDiskScore.TabIndex = 0;
-			this.lblDiskScore.Text = "4.4";
-			this.lblDiskScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			chartArea2.AxisX.IsReversed = true;
+			chartArea2.AxisX.LabelStyle.Enabled = false;
+			chartArea2.AxisX.MajorGrid.Enabled = false;
+			chartArea2.AxisX.MajorTickMark.Enabled = false;
+			chartArea2.AxisX.Maximum = 2D;
+			chartArea2.AxisX.Minimum = 0D;
+			chartArea2.AxisY.IsLabelAutoFit = false;
+			chartArea2.AxisY.LabelStyle.Enabled = false;
+			chartArea2.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea2.AxisY.MajorTickMark.Enabled = false;
+			chartArea2.AxisY.Maximum = 10D;
+			chartArea2.AxisY.Minimum = 0D;
+			chartArea2.Name = "caCpu";
+			chartArea2.Position.Auto = false;
+			chartArea2.Position.Height = 20F;
+			chartArea2.Position.Width = 100F;
+			chartArea3.AxisX.LabelStyle.Enabled = false;
+			chartArea3.AxisX.MajorGrid.Enabled = false;
+			chartArea3.AxisX.MajorTickMark.Enabled = false;
+			chartArea3.AxisX.Maximum = 2D;
+			chartArea3.AxisX.Minimum = 0D;
+			chartArea3.AxisY.LabelStyle.Enabled = false;
+			chartArea3.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea3.AxisY.MajorTickMark.Enabled = false;
+			chartArea3.AxisY.Maximum = 10D;
+			chartArea3.AxisY.Minimum = 0D;
+			chartArea3.Name = "caMem";
+			chartArea3.Position.Auto = false;
+			chartArea3.Position.Height = 20F;
+			chartArea3.Position.Width = 100F;
+			chartArea3.Position.Y = 20F;
+			chartArea4.AxisX.LabelStyle.Enabled = false;
+			chartArea4.AxisX.MajorGrid.Enabled = false;
+			chartArea4.AxisX.MajorTickMark.Enabled = false;
+			chartArea4.AxisY.LabelStyle.Enabled = false;
+			chartArea4.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea4.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea4.AxisY.MajorTickMark.Enabled = false;
+			chartArea4.AxisY.Maximum = 10D;
+			chartArea4.AxisY.Minimum = 0D;
+			chartArea4.Name = "caGfx";
+			chartArea4.Position.Auto = false;
+			chartArea4.Position.Height = 20F;
+			chartArea4.Position.Width = 100F;
+			chartArea4.Position.Y = 40F;
+			chartArea5.AxisX.LabelStyle.Enabled = false;
+			chartArea5.AxisX.MajorGrid.Enabled = false;
+			chartArea5.AxisX.MajorTickMark.Enabled = false;
+			chartArea5.AxisY.LabelStyle.Enabled = false;
+			chartArea5.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea5.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea5.AxisY.MajorTickMark.Enabled = false;
+			chartArea5.AxisY.Maximum = 10D;
+			chartArea5.AxisY.Minimum = 0D;
+			chartArea5.Name = "caGame";
+			chartArea5.Position.Auto = false;
+			chartArea5.Position.Height = 20F;
+			chartArea5.Position.Width = 100F;
+			chartArea5.Position.Y = 60F;
+			chartArea6.AxisX.LabelStyle.Enabled = false;
+			chartArea6.AxisX.MajorGrid.Enabled = false;
+			chartArea6.AxisX.MajorTickMark.Enabled = false;
+			chartArea6.AxisY.LabelStyle.Enabled = false;
+			chartArea6.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+			chartArea6.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+			chartArea6.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+			chartArea6.AxisY.MajorTickMark.Enabled = false;
+			chartArea6.Name = "caDisk";
+			chartArea6.Position.Auto = false;
+			chartArea6.Position.Height = 20F;
+			chartArea6.Position.Width = 100F;
+			chartArea6.Position.Y = 80F;
+			this.elementChart.ChartAreas.Add(chartArea2);
+			this.elementChart.ChartAreas.Add(chartArea3);
+			this.elementChart.ChartAreas.Add(chartArea4);
+			this.elementChart.ChartAreas.Add(chartArea5);
+			this.elementChart.ChartAreas.Add(chartArea6);
+			this.elementChart.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.elementChart.Location = new System.Drawing.Point(430, 3);
+			this.elementChart.Name = "elementChart";
+			this.elementChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+			this.elementChart.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.PeachPuff,
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(90))))),
+        System.Drawing.Color.GreenYellow,
+        System.Drawing.Color.LightBlue,
+        System.Drawing.Color.Thistle};
+			this.tblSysScore.SetRowSpan(this.elementChart, 5);
+			series2.ChartArea = "caCpu";
+			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series2.Font = new System.Drawing.Font("游ゴシック Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			series2.IsValueShownAsLabel = true;
+			series2.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			series2.LabelFormat = "0.0";
+			series2.Name = "serCpu";
+			series2.Points.Add(dataPoint3);
+			series3.ChartArea = "caMem";
+			series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series3.Font = new System.Drawing.Font("游ゴシック Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			series3.IsValueShownAsLabel = true;
+			series3.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			series3.LabelFormat = "0.0";
+			series3.Name = "serMem";
+			series3.Points.Add(dataPoint4);
+			series4.ChartArea = "caGfx";
+			series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series4.Font = new System.Drawing.Font("游ゴシック Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			series4.IsValueShownAsLabel = true;
+			series4.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			series4.LabelFormat = "0.0";
+			series4.Name = "serGfx";
+			series4.Points.Add(dataPoint5);
+			series5.ChartArea = "caGame";
+			series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series5.Font = new System.Drawing.Font("游ゴシック Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			series5.IsValueShownAsLabel = true;
+			series5.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			series5.LabelFormat = "0.0";
+			series5.Name = "serGame";
+			series5.Points.Add(dataPoint6);
+			series6.ChartArea = "caDisk";
+			series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+			series6.Font = new System.Drawing.Font("游ゴシック Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			series6.IsValueShownAsLabel = true;
+			series6.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			series6.LabelFormat = "0.0";
+			series6.Name = "serDisk";
+			series6.Points.Add(dataPoint7);
+			this.elementChart.Series.Add(series2);
+			this.elementChart.Series.Add(series3);
+			this.elementChart.Series.Add(series4);
+			this.elementChart.Series.Add(series5);
+			this.elementChart.Series.Add(series6);
+			this.elementChart.Size = new System.Drawing.Size(345, 319);
+			this.elementChart.TabIndex = 17;
+			this.elementChart.Text = "chart1";
 			// 
 			// frmBase
 			// 
@@ -645,21 +639,8 @@
 			this.gbSysScore.ResumeLayout(false);
 			this.tblSysScore.ResumeLayout(false);
 			this.tblSysScore.PerformLayout();
-			this.tblTotal.ResumeLayout(false);
-			this.pnlTotal5.ResumeLayout(false);
-			this.pnlTotal5.PerformLayout();
-			this.pnlTotal4.ResumeLayout(false);
-			this.pnlTotal4.PerformLayout();
-			this.pnlCpuScore.ResumeLayout(false);
-			this.pnlCpuScore.PerformLayout();
-			this.pnlMemScore.ResumeLayout(false);
-			this.pnlMemScore.PerformLayout();
-			this.pnlGfxScore.ResumeLayout(false);
-			this.pnlGfxScore.PerformLayout();
-			this.pnlGameScore.ResumeLayout(false);
-			this.pnlGameScore.PerformLayout();
-			this.pnlDiskScore.ResumeLayout(false);
-			this.pnlDiskScore.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.elementChart)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -681,32 +662,19 @@
         private System.Windows.Forms.Label lblOSInfo;
         private System.Windows.Forms.Label lblMachineInfo;
         private System.Windows.Forms.GroupBox gbSysScore;
-        private System.Windows.Forms.TableLayoutPanel tblSysScore;
-        private System.Windows.Forms.Label lblCpuInfo;
-        private System.Windows.Forms.Label lblMemInfo;
-        private System.Windows.Forms.Label lblGfxInfo;
-        private System.Windows.Forms.Label lblGameInfo;
-        private System.Windows.Forms.Label lblDiskInfo;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Button btnCpuDetail;
-        private System.Windows.Forms.Button btnMemDetail;
-        private System.Windows.Forms.Button btnGfxDetail;
-        private System.Windows.Forms.Button btnHddDetail;
-        private System.Windows.Forms.TableLayoutPanel tblTotal;
-        private System.Windows.Forms.Panel pnlTotal5;
-        private System.Windows.Forms.Label lblTotal5;
-        private System.Windows.Forms.Panel pnlTotal4;
-        private System.Windows.Forms.Label lblTotal4;
-        private System.Windows.Forms.Panel pnlCpuScore;
-        private System.Windows.Forms.Label lblCpuScore;
-        private System.Windows.Forms.Panel pnlMemScore;
-        private System.Windows.Forms.Label lblMemScore;
-        private System.Windows.Forms.Panel pnlGfxScore;
-        private System.Windows.Forms.Label lblGfxScore;
-        private System.Windows.Forms.Panel pnlGameScore;
-        private System.Windows.Forms.Label lblGameScore;
-        private System.Windows.Forms.Panel pnlDiskScore;
-        private System.Windows.Forms.Label lblDiskScore;
-    }
+		private System.Windows.Forms.TableLayoutPanel tblSysScore;
+		private System.Windows.Forms.Label lblCpuInfo;
+		private System.Windows.Forms.Label lblMemInfo;
+		private System.Windows.Forms.Label lblGfxInfo;
+		private System.Windows.Forms.Label lblGameInfo;
+		private System.Windows.Forms.Label lblDiskInfo;
+		private System.Windows.Forms.Label lblTotal;
+		private System.Windows.Forms.Button btnCpuDetail;
+		private System.Windows.Forms.Button btnMemDetail;
+		private System.Windows.Forms.Button btnGfxDetail;
+		private System.Windows.Forms.Button btnHddDetail;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart6;
+		private System.Windows.Forms.DataVisualization.Charting.Chart elementChart;
+	}
 }
 
