@@ -64,20 +64,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ctlBorderPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBase.Designer.cs">
       <DependentUpon>frmBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmInfoData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmInfoData.Designer.cs">
-      <DependentUpon>frmInfoData.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVersion.cs">
       <SubType>Form</SubType>
@@ -98,9 +89,6 @@
     <Compile Include="WmiStore.cs" />
     <EmbeddedResource Include="frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmInfoData.resx">
-      <DependentUpon>frmInfoData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVersion.resx">
       <DependentUpon>frmVersion.cs</DependentUpon>
@@ -166,9 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hdd60.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\winsat-reader_ico.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
